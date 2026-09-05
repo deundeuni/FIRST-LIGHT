@@ -1,11 +1,28 @@
-# FIRST-LIGHT / MOUNTAIN v1.3 Final
-Pre-disaster first light: coord anchor + beacon relay + 590nm + disconnect traceback.
-v1.1 Shelter / v1.2 Wind / v1.3 Himalaya·Everest·Rockies Global.
-Layer/Topology/Timing-Agnostic. CC BY 4.0 & DPL v1.0 by deundeuni | somamoa.ai.kr
+# FIRST-LIGHT / MOUNTAIN Domain (v1.3 Final)
 
----
-# FIRST-LIGHT / MOUNTAIN v1.3 Final (국문 원안)
-재난 전 첫 빛: 좌표 앵커 + 봉화 릴레이 + 590nm + 단절 역추정.
-v1.1 대피소 / v1.2 풍력단지 / v1.3 히말라야·에베·록키 글로벌.
-수단/주체/시점 무관 3무 방어. CC BY 4.0 & DPL v1.0 방어공개 deundeuni
-원안 우선: 한국어 원문이 최우선 원본. 공식: somamoa.ai.kr
+> Pre-disaster first light using existing mountain infra as coordinate anchor + organic beacon relay + 590nm amber + disconnect traceback.
+
+## Purpose
+Detect pre-disaster precursors and guide survival via 590nm before isolation.
+
+## Versions
+- **v1.1 Shelter** - Existing shelters (Seorak/Jiri) as anchors. GNSS 2mm + soil 95% + LoRa + solar.
+- **v1.2 Wind** - Mountain wind farms / watchtowers / CCTV poles as anchors. YOLO thermal + vibration + Starlink.
+- **v1.3 Global** - Himalaya/Everest Basecamp / US Rockies. Iridium + glacial wind + ice-belt power.
+
+## Core Principle (Blocking Core)
+"Coordinate anchor + beacon relay + 590nm + disconnect traceback" - any infra/sensor/power/comm achieving same purpose is within prior art.
+
+## 3-Agnostic Defense (from ARCHITECTURE_STRATEGY v3.2.3)
+- **Layer-Agnostic:** GNSS/soil/thermal/LiDAR/BirdNET/GreenCAM, solar/wind/piezo/vibration, LoRa/NB-IoT/Iridium/Starlink/optical/quantum/future.
+- **Topology-Agnostic:** Individual autonomous, team (ridge) self-control, intermediate (wind farm) manager, central (gov) orchestration, P2P, multi-tier hybrid.
+- **Timing-Agnostic:** Localized 0.1s preemptive containment + predictive preemptive (80% before 95%).
+
+## Diversity Matrix (Example, not limiting)
+| Range 0.1-10mm, 80-100%, 1-20km, 580-600nm inclusive |
+| Seorak shelter / Everest basecamp / Rockies wind |
+
+- **Author:** deundeuni (soma-moa)
+- **Origin:** somamoa.ai.kr
+- **License:** CC BY 4.0 & DPL v1.0 - Defensive Publication
+- **DOI:** TBD on D-Day
