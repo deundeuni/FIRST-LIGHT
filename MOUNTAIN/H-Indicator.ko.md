@@ -9,7 +9,7 @@ TITLE: H-Indicator v1.6 — 최종 요약 백서 및 신규성·진보성 검증
 * **문서명** — H-Indicator — 야외·등산·극악 기상 환경 위치 불확실성 및 시스템 건강도 추정 H-지표 기반 생존 구조 방어적 선행기술 명세서 (Ver. 1.6)
 * **문서 분류** — 방어적 선행기술 공개 백서 (Defensive Publication / Prior Art)
 * **공개일** — 최초 구상일: 2026-09-02 / 최종 개정일 (v1.6): 2026-09-06
-* **원천 IP 보유자** — 소마모아 soma-moa (시스템 아키텍트: deundeuni)
+* **원천 IP 보유자** — somamoa soma-moa (시스템 아키텍트: deundeuni)
 * **공식 저장소 및 관문** — github.com/soma-moa | somamoa.ai.kr
 * **라이선스** — Creative Commons Attribution 4.0 (CC BY 4.0) & DPL v1.0 (Defensive Patent License)
 
