@@ -2,7 +2,7 @@
 
 * 공식 문서 분류: 방어적 선행기술 공개 백서 (Defensive Publication / Prior Art White Paper)
 * 최초 구상일: 2026-09-02 / 최종 개정일 (v1.4 Final): 2026-09-05
-* 원천 지적재산권(IP) 보유자: 소마모아 (soma-moa / 구상자: deundeuni)
+* 원천 지적재산권(IP) 보유자: somamoa (soma-moa / 구상자: deundeuni)
 * 공식 저장소: [github.com/soma-moa/FIRST-LIGHT](https://github.com/soma-moa/FIRST-LIGHT) (상세 경로: MOUNTAIN/README.md) | 공식 도메인: somamoa.ai.kr
 * 적용 라이선스: CC BY 4.0 & DPL v1.0 (Defensive Patent License v1.0)
 * 원안 언어 고지: 본 문서의 한국어 원문이 법적·기술적 기준 원본이며, 영문 번역본은 참고용이다. 해석상 충돌 발생 시 한국어 원문의 서술과 정의가 최우선한다.
