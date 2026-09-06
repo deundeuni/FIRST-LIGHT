@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use or reference this defensive publication framework, please cite it as below."
+authors:
+  - family-names: "deundeuni"
+    given-names: "soma-moa"
+title: "H-Indicator: Health and Hazard Indicator Architecture for Positional Uncertainty and System Survival in Extreme Atmospheric Environments"
+version: "1.6"
+date-released: 2026-09-06
+url: https://github.com/soma-moa/FIRST-LIGHT-H-Indicator
+repository-code: https://github.com/soma-moa/FIRST-LIGHT-H-Indicator
+# doi: "10.5281/zenodo.XXXXX" # Zenodo DOI 발급 시 주석 해제 후 연동
+keywords:
+  - Defensive Publication
+  - Prior Art
+  - H-Indicator
+  - System Health Estimation
+  - 590nm Amber Beacon
+  - Mie Scattering
+  - Friis Path Loss
+  - Delay Tolerant Networking
+  - MIL-HDBK-217F
+  - Zero-Downtime
