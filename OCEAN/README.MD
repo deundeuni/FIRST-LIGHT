@@ -1,7 +1,7 @@
-# OCEAN DESIGN v1.0 Final Rev1 — Technical Specification for Marine, Offshore Structure, and Infrastructure-Integrated Zero-Downtime Modular Survival Architecture (FIRST-LIGHT/OCEAN Master)
+# OCEAN DESIGN v1.1 Final — Technical Specification for Marine, Offshore Structure, and Infrastructure-Integrated Zero-Downtime Modular Survival Architecture (FIRST-LIGHT/OCEAN Master)
 
 * Official Classification: Defensive Publication / Prior Art White Paper
-* Initial Concept Date: 2026-09-02 / Final Revision Date (v1.0 Final Rev1): 2026-09-06
+* Initial Concept Date: 2026-09-02 / Final Revision Date (v1.1 Final): 2026-09-07
 * Primary IP Holder & System Architect: soma-moa (Architect: deundeuni)
 * Official Repository: github.com/soma-moa/FIRST-LIGHT (Path: OCEAN/README.md) | Official Domain: somamoa.ai.kr
 * Applicable Licenses: This document is released under CC BY 4.0, and patent rights are governed by DPL v1.0 (Defensive Patent License v1.0) for defensive protection. Code and designs take precedence under DPL.
@@ -12,8 +12,9 @@
 ## 0. Founder Statement & Motivation
 
 ### 0.1 Field-Driven Motivation
-This architectural design originates from a field-driven observation: "Existing marine environments, harbors, lighthouses, breakwaters, light buoys, offshore wind farms, and marine structures become useless under centralized navigation during severe weather, heavy fog, nighttime, GPS signal shading, and maritime communication or power disconnects, causing post-response methods to miss critical golden windows for search and rescue."
-Conventional harbors, breakwaters, and buoys merely function as navigation markers with fixed routes, posing limitations when losing direction during infrastructure disconnections. This invention reverses that perspective, establishing a quadruple core mechanism consisting of "elevating fixed structures (ports, breakwaters, buoys) into reference coordinate anchors (xy-Point Anchors) borrowed across uncertain seas, 590nm amber/distance-based optical and radar reflection guidance, organic beacon relays, and Disconnect Traceback." Integrated with a "Means-Agnostic Modular/Chiplet Self-Healing Structure" at the underlying compute/control layer, it creates a true 'marine survival architecture' where disconnection events themselves act as traceback signals generating survival pathways.
+This architectural design originates from a field-driven observation: "Seas are inherently vulnerable to fog, severe weather, and typhoons, and vessels face escalating risks from poor maintenance, tonnage overloads, and sharp turns—with larger vessels being significantly more catastrophic. Unlike land transportation, the sea lacks physical signposts, creating an absolute information dependency where crew and passengers cannot discern their location unless informed by the captain in the bridge. During heavy fog (sea haze) when a hull violently rolls across 6 axes (Roll/Pitch/Yaw), the sense of isolation and survival panic reaches its peak. In emergency disconnects where central communications or announcements fail, enabling an individual to intuitively and immediately perceive 'which fixed reference anchor I am currently near' is the critical key to survival. Hence, lighthouses and fixed infrastructures exist. Lighthouses are not merely navigation markers; they represent the ultimate relative xy-coordinate anchors trusted in worst-case scenarios."
+Conventional harbors, breakwaters, and buoys merely function as navigation markers with fixed routes, posing limitations when losing direction during infrastructure disconnections. This invention reverses that perspective, establishing a quadruple core mechanism consisting of "elevating fixed structures (ports, breakwaters, buoys) into reference coordinate anchors (xy-Point Anchors) borrowed across uncertain seas, 590nm amber/distance-based optical and radar reflection guidance optimized for fog (Mie scattering) penetration, organic beacon relays, and Disconnect Traceback that reverse-traces last-known coordinates even when communications are severed by typhoons."
+This shares the same core philosophy with its sibling architecture, `LAST-LIGHT`—which saves lives via beacon relays when lights go out at night—while `OCEAN` operates as the survival protocol saving ships and individuals via lighthouses and fixed infrastructure when GPS and central systems fail during fogs and typhoons. Integrated with a "Means-Agnostic Modular/Chiplet Self-Healing Structure" at the underlying compute/control layer, it creates a true 'marine survival architecture' where disconnection events themselves act as traceback signals generating survival pathways.
 
 #### Comparison with Existing Infrastructure
 | Classification | Conventional (Harbors / Breakwaters / Buoys) | Present Invention (FIRST-LIGHT / OCEAN) |
@@ -27,7 +28,7 @@ Conventional harbors, breakwaters, and buoys merely function as navigation marke
 > **Core Philosophy:** Ports, breakwaters, and buoys are not our enemies. Because the sea lacks addresses, these fixed structures serve as the only `xy-coordinate reference points` we can leverage. FIRST-LIGHT makes these reference points visible from a distance (via distance-based colors and radar reflection), and OCEAN operates as the survival protocol running atop those points.
 
 ### Abstract (English Abstract)
-This specification discloses a zero-downtime modular survival architecture (FIRST-LIGHT/OCEAN) for marine, breakwater, and offshore infrastructures. Rather than replacing existing navigational markers, the architecture leverages fixed marine structures as reference coordinate anchors to dynamically generate survival pathways during communication or power disconnects. Utilizing a quadruple defense mechanism comprising coordinate anchors, organic marine beacon relays, 590nm amber/radar reflection guidance, and disconnect traceback, the system ensures autonomous fault isolation and resilient routing under severe maritime environments without single points of failure.
+This specification discloses a zero-downtime modular survival architecture (FIRST-LIGHT/OCEAN) for marine, breakwater, and offshore infrastructures. Grounded in maritime realities—where seas are vulnerable to fog, severe weather, and typhoons, and vessels face escalating risks from poor maintenance, tonnage overloads, and sharp turns—the architecture addresses the information dependency where passengers/crew cannot discern their location without captain announcements. During heavy fog and 6-axis hull rolling, intuitive location awareness relative to fixed anchors is vital to relieve survival panic. Rather than replacing existing navigational markers, the architecture leverages fixed marine structures as reference coordinate anchors to dynamically generate survival pathways during communication or power disconnects. Utilizing a quadruple defense mechanism comprising coordinate anchors, organic marine beacon relays, 590nm amber/radar reflection guidance optimized for fog penetration, and disconnect traceback, the system ensures autonomous fault isolation, resilient routing, and direct personal location assurance under severe maritime environments without single points of failure.
 
 ### 0.2 Master Concept & Material Fusion Standard
 The relative coordinate anchor-based zero-point fastening method, organic marine beacon relay, 590nm amber/distance-based optical/radar reflection guidance, disconnect traceback mechanism, and chiplet/modular fabric control structure disclosed in this specification function as the Master Reference Framework for the entire system.
@@ -48,7 +49,7 @@ This design mechanism is universally applicable to harbors, breakwaters, light b
 ### 0.7 Purpose of Publication & Environmental Disclaimer
 This document is a Defensive Publication intended to establish public prior art and prevent private patent monopolization. Numerical values, functional descriptions, physical configurations, and projected performance metrics in this specification serve as illustrative examples and do not restrict real-world implementations or guarantee absolute performance figures. This system does not automatically replace statutory marine navigational aids and safety equipment regulations, but functions as a supplementary, auxiliary protective architecture.
 
-### 0.8 Independent Prior Invention Acknowledgment & Modesty Notice (v1.0 Triple Defense Clause)
+### 0.8 Independent Prior Invention Acknowledgment & Modesty Notice (v1.1 Triple Defense Clause)
 This system design originated from the author's field-driven observations and was formulated after checking and reviewing existing public principles and prior art (such as GNSS precision positioning, chiplet interconnects, optical beacon guidance, and predictive maintenance). The author combined and reconstructed these concepts from a personal perspective ("this is how I conceptualized it").
 The author does not claim to be the sole or first original inventor, and fully acknowledges the possibility that identical or similar technical motifs were independently conceived by other researchers or industry professionals.
 The primary objective of this publication is not to secure exclusive patent rights for a specific entity, but to register these technical details as public Prior Art, thereby providing legal grounds to refute novelty and non-obviousness in the event of private monopolistic patent filings by third parties. This disclosure covers all forms of disaster pre-detection, disconnect traceback, and modular self-healing execution utilizing intentional installations, natural untended layouts, spontaneous environmental states, synthetic mimetics, and emerging physical media (optical/quantum/terahertz). The Korean original text serves as the authoritative source (Original Authority); in the event of any discrepancies or interpretive variations in foreign translations, the Korean text shall take precedence.
@@ -57,7 +58,7 @@ The primary objective of this publication is not to secure exclusive patent righ
 
 ## 1. Version History
 
-* v1.0 Final Rev1 (2026-09-06): Master specification release for FIRST-LIGHT/OCEAN domain, integrating harbor/breakwater infrastructure platform philosophy, reference anchor concept formulation, 580-600nm encompassing 590nm amber/radar reflection guidance optimized for fog Mie scattering, 3-Agnostic failover examples, and repository path (`FIRST-LIGHT/OCEAN`).
+* v1.1 Final (2026-09-07): Master specification release for FIRST-LIGHT/OCEAN domain, integrating field-driven operational motives (sea vulnerability, tonnage/sharp-turn risks, captain information dependency, personal intuitive location awareness), LAST-LIGHT symmetry, 590nm amber/radar guidance, and synchronized metadata.
 
 ---
 
@@ -67,7 +68,8 @@ The primary objective of this publication is not to secure exclusive patent righ
 * Harbor/Breakwater Base Zone (Zone HARBOR) — Anchors breakwaters, port masonry, and lighthouse structures to relative coordinate reference points, visually and electronically guiding nearby vessels and evacuees using 590nm (encompassing 580-600nm: optimal band for fog Mie scattering penetration) amber/distance-based emission LEDs and radar reflectors during fog, nighttime, or power blackouts.
 * Buoy/Offshore Wind Zone (Zone BUOY-OFFSHORE) — Installs anchors across light buoys, offshore wind towers, and ocean observation buoys to aggregate wave/current LiDAR displacement, saltwater corrosion, YOLO thermal imaging, and sound/acoustic impact signatures for team-level autonomous control.
 * Uncrewed Vessel/Marine Corridor Zone (Zone NAVAL-CORRIDOR) — Applied to USVs/AUVs and icebreaking/working vessels, executing automated charging via CWP (Contactless Wireless Power: contactless power exchange docking module) weldless docking and 0.1ms one-touch emergency detachment during maritime disconnections, while generating Iridium/Starlink satellite-linked Disconnect Traceback signals.
-* High-Humidity/Salt-Corrosion Compute Survival Zone (Zone MARINE-COMPUTE) — Applied to marine semiconductor chiplets and control blocks to maintain self-protection and symmetric autonomous bypass during salt corrosion disturbances (salt corrosion perturbations) or power interruptions.
+* High-Humidity/Salt-Corrosion Compute Survival Zone (Zone MARINE-COMPUTE) — Applied to marine semiconductor chiplets and control blocks to maintain self-protection and symmetric autonomous bypass during salt corrosion disturbances or power interruptions.
+* Personal Intuitive Location Awareness Layer (Personal Survival UX) — In emergency disconnection scenarios where satellite/LTE networks and onboard announcements are unavailable, fixed anchor nodes broadcast 590nm visual signals and local (LoRa/BLE) location pings directly to personal mobile devices, ensuring individuals instantly perceive 'which fixed anchor they are near' without central control or captain announcements.
 
 ### [L1] Sacrificial & Compute Fabric Layer
 * Scaffold & Fabric Skeleton — Modular chiplet fabric (compute, memory, I/O, sensor control) linked via TL Bridge / Interconnect fabrics, isolating failed blocks within 0.1ms.
@@ -88,7 +90,7 @@ The AI modules (YOLO thermal, wave acoustic detection agents, dynamic confidence
 ### A. 4-Point Absolute Protection Logic
 * Coordinate Anchor (Coord Anchor) — Designates existing harbors, breakwaters, and light buoys as borrowed relative coordinate reference points.
 * Organic Marine Beacon Relay (Organic Marine Beacon Relay) — Builds horizontal wireless/optical relay chains across buoys, breakwaters, and vessels.
-* 590nm Amber & Radar Guidance (Encompassing 580-600nm: Optimal band for fog Mie scattering penetration) — Fog penetration-optimized wavelength and radar reflector-based visual and electronic guidance.
+* 590nm Amber & Radar Guidance (Encompassing 580-600nm: Optimal band for fog Mie scattering penetration) — Fog penetration-optimized wavelength and radar reflector-based visual/electronic guidance and personal device (LoRa/BLE) intuitive location assurance guidance.
 * Disconnect Traceback — Converts maritime communication/power loss events directly into emergency disaster signals for geographic and logical reverse-tracing.
 
 ### B. Engineering Formulations & Data Modeling
@@ -117,7 +119,7 @@ The AI modules (YOLO thermal, wave acoustic detection agents, dynamic confidence
 
 * Rate Limiter — Dampens sensor data load spikes during storms and wave impacts to prevent control bus saturation.
 * Tri-State Isolation — Transitions faulted sensors, buses, or chiplets to High-Impedance states within 100ms (0.1s), blocking fault propagation to main systems.
-* Predictive Preemptive Isolation — Executes preemptive bypasses to idle blocks upon detecting early perturbations (disturbances) prior to physical destruction.
+* Predictive Preemptive Isolation — Executes preemptive bypasses to idle blocks upon detecting early perturbations prior to physical destruction.
 
 ---
 
@@ -162,10 +164,11 @@ The AI modules (YOLO thermal, wave acoustic detection agents, dynamic confidence
 * Primary Inventor / System Architect: deundeuni (soma-moa / github.com/soma-moa)
 
 ## Appendix B: Version History
-* Version 1.0 Final Rev1 (2026-09-06): Master specification release for FIRST-LIGHT/OCEAN domain, integrating harbor/breakwater reference anchor platforms, 590nm amber/radar guidance, Friis equation formula definition, 3-Agnostic failover examples, and synchronized inventorship metadata.
+* Version 1.1 Final (2026-09-07): Master specification release for FIRST-LIGHT/OCEAN domain, integrating field-driven operational motives (sea vulnerability, tonnage/sharp-turn risks, captain information dependency, personal intuitive location awareness), LAST-LIGHT symmetry, 590nm amber/radar guidance, and synchronized metadata.
 
 ## Appendix C: AI Assistance Disclosure
-* Draft Generation: Meta AI / Structure Optimization: Google Gemini / Final Audit: Anthropic Claude
+* Architectural Conception, Technical Direction, and Authoring: deundeuni (Human System Architect)
+* AI Tool Role: Used solely as a draft synthesizer, markdown structure auditor, and multi-language translation assistant (Meta AI, Google Gemini, Anthropic Claude). All core technical paradigms and field motivations were solely conceived and dictated by the Human Architect.
 
 ## Appendix D: Citation Metadata Declaration
 * Standard Citation Reference: Refer to root `/CITATION.cff` for automated GitHub citation parsing.
