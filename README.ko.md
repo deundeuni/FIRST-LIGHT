@@ -7,7 +7,7 @@
 * **공식 문서 분류:** 방어적 선행기술 공개 백서 (Defensive Publication / Prior Art)
 * **원천 지적재산권(IP) 보유자:** 소마모아 (soma-moa / 구상자: deundeuni)
 * **공식 저장소 및 관문:** github.com/soma-moa | somamoa.ai.kr
-* **적용 라이선스:** CC BY 4.0 & DPL v1.0 (Defensive Patent License)
+* **적용 라이선스:** Creative Commons Attribution 4.0 (CC BY 4.0) & DPL v1.0 (Defensive Patent License)
 * **상위 마스터 백서:** `LAST-LIGHT` (실내·지하·궤도 인프라 앵커링 및 오프라인 메커니즘 원용)
 * **검색 키워드:** FIRST-LIGHT, LAST-LIGHT, H-INDICATOR, 광역 생존, 무중단 이관, Seamless Transition, Structure First, 해양 부이, 항만법, 산악 리피터, 자연공원법, 극지 앵커, ICE-BELT, 함께생존 브릿지, 햅틱 나침반, Prior Art, chiplet-apu
 
@@ -26,6 +26,9 @@
 ### 0.3 야외 법정 내구 인프라 기반 구조 우선 원칙 (Structure First for Outdoor Facilities)
 본 시스템은 센서 수량이나 네트워크 용량이 아닌, 해당 환경의 관련 법령(항만법, 자연공원법, 응급의료법, 해양안전법 등)에 따라 물리적 내환경성·내수압성·내풍설성이 담보된 야외 고정 구조물을 1차 기준점(L0 Anchor)으로 삼는다. 이는 `chiplet-apu`('용량이 아닌 구조') 철학을 광역 공간에 구현한 것이다. 야외 GNSS/GPS 신호는 대략적 구역 식별(Macro Localization)용 하위 보조 신호로만 포섭되며, 고정 인프라 앵커 포착 즉시 0점 교정이 수행된다.
 
+### 0.4~0.5 상위 백서(LAST-LIGHT) 조항 원용 고지 (Incorporation by Reference)
+본 백서의 0.4항(비배타적 상호운용성 및 공용 오픈 표준) 및 0.5항(현장 기반 우선순위 제어 원칙)은 상위 마스터 백서 `LAST-LIGHT`의 해당 조항 규격을 그대로 원용하여 준용한다.
+
 ### 0.6 포괄적 적용 범위 및 광역 피난 동선 선언 (Universal Scope)
 본 시스템의 핵심 권리범위는 아래의 광역 피난 동선 전체에 포괄 적용된다:
 > **"지하 시설에서 나오면 → 바다에서 나오면 → 산에서 나오면 → 사막/극지에서 나오면 → 그 안에서 통합 생존 루트 보조"**
@@ -35,11 +38,11 @@
 ## 1. 버전 변경 이력 (Version History)
 
 * **LAST-LIGHT 연계 수용 계보:** 실내·지하·궤도 0점 교정, 함께생존 브릿지, 소방함 내화 앵커, Graceful Fallback 정립.
-* **FIRST-LIGHT 통합 백서 명세:** 실내 중복 설명 축소 원용. 해양·산악·사막·극지 전용 L0 법정 앵커 완전 교체 및 지하-야외 간 무중단 제어권 이관(Seamless Transition)을 단독 핵심 발명으로 명시.
+* **FIRST-LIGHT 통합 백서 명세:** 실내 중복 설명 축소 원용. 해양·산악·사막·극지 전용 L0 법정 앵커 전면 교체 및 지하-야외 간 무중단 제어권 이관(Seamless Transition)을 단독 핵심 발명으로 명시.
 
 ---
 
-## 2. 3-Tier 응용 아키텍처 및 L0 완전 교체 (3-Tier Applied Architecture)
+## 2. 3-Tier 응용 아키텍처 및 L0 전면 대체 (3-Tier Applied Architecture)
 
 * **[L2] 광역 보조 안내 및 다중 디바이스 UI 레이어 —** 피난자/표류자/조난자용 함께생존 브릿지(모든 폼팩터), AR HUD 3D 유도선, 스마트 링, 구명조끼 내장 모듈, 구조대 전용 NVG/열화상 고대비 시각 및 텔레메트리.
 * **[L1] 인지·보정·추정 및 자율 이관 패브릭 —** 멀티스펙트럼 인지, 마이크 어레이 음원 추적, BLE Auracast/UWB, 해상 LTE-M/위성 보조 신호 융합, Graceful Fallback 제어기, 링버퍼 블랙박스 자가 기록부.
@@ -55,7 +58,8 @@
 
 $$H = \alpha \left(1 - \frac{V_{err}}{V_{max}}\right) + \beta \left(\frac{L_p}{2.6}\right) + \gamma \left(\frac{T_r}{T_o}\right) + \delta (1 - S_{node})$$
 
-연산 결과 $H > 0.85$ 도출 시 100ms 이내에 삼상 고임피던스(Tri-State Isolation) 격리를 수행함과 동시에 인접 앵커로 제어권을 선조치 이관하는 결정 인덱스로 작동한다.
+* **수식 변수 정의 —** $V_{err}$: 전원 오차 전압, $V_{max}$: 최대 허용 오차 전압, $L_p$: RF 경로 손실, $T_r$: DTN 통신 단절 시간, $T_o$: 유효 수신 주기, $S_{node}$: 주변 메시 노드 동기화 밀도 ($0 \le S_{node} \le 1$). (상세 수식 유도 및 파라미터 제어 논리는 `H-INDICATOR` 백서 정본 참조)
+* **운용 제어 —** 연산 결과 $H > 0.85$ 도출 시 100ms 이내에 삼상 고임피던스(Tri-State Isolation) 격리를 수행함과 동시에 인접 앵커로 제어권을 선조치 이관하는 결정 인덱스로 작동한다.
 
 ---
 
@@ -64,7 +68,7 @@ $$H = \alpha \left(1 - \frac{V_{err}}{V_{max}}\right) + \beta \left(\frac{L_p}{2
 ### A. 환경별 전용 L0 앵커 및 법적 생존 근거 (Outdoor L0 Anchors)
 * **해양 스마트 부이 및 항로표지 앵커 —** 해양수산부 항로표지 규격 및 항만법상 고정 설치물로, 파도와 침수 환경에서도 물리적 위치가 고정된다. BLE Auracast 및 음향 신호를 해상으로 투사하여 표류자의 구명조끼/브릿지로 0점 좌표를 전달한다.
 * **산악 대피소 및 스마트 리피터 앵커 —** 자연공원법에 의해 관리되는 산악 대피소 및 국가지점번호 기반 리피터로, 산악 안개(Gale/Fog) 및 음영 구역에서 AR 안경 및 스마트 링에 지형 0점 좌표를 공급한다.
-* **사막/극지 고정 비콘 및 ICE-BELT 앵커 —** 극지 빙하 암반 고정 앵커 및 사막 고정 비콘으로, 화이트아웃(Whiteout) 및 모래바람 상황에서 `MAX-LIFE ICE-BELT` 내설/내열 장갑을 통해 신호 연속성을 지향한다.
+* **사막/극지 고정 비콘 및 ICE-BELT 앵커 —** 극지 빙하 암반 고정 앵커 및 사막 고정 비콘으로, 화이트아웃(Whiteout) 및 모래바람 상황에서 `MAX-LIFE ICE-BELT` 내한/내열 장갑을 통해 신호 연속성을 지향한다.
 
 ### B~G. 메커니즘 및 규격 원용 (Citation of LAST-LIGHT)
 * ESTIMATION 오차 보정, 비상 전력, 자가치유 메쉬, 함께생존 브릿지 표준 햅틱 나침반 규격(좌/우/직진/위험/완료), WebAR 패시브 QR/NFC 퀵 릴리즈 및 Visual SLAM 0점 교정 로직은 `LAST-LIGHT` 규격을 그대로 승계한다.
@@ -96,6 +100,7 @@ $$H = \alpha \left(1 - \frac{V_{err}}{V_{max}}\right) + \beta \left(\frac{L_p}{2
 * **원안 우선 원칙 —** 본 명세서의 법적·기술적 해석은 한국어 원본(`README.ko.md`)을 최우선 기준으로 적용하며, 영문본은 참고용으로만 기능한다.
 * **포괄적 선행기술 선점 —** 광역 환경 간 무중단 이관(Seamless Transition), 해양/산악/사막/극지 L0 앵커링, 함께생존 브릿지 다중 폼팩터, 이종 디바이스 Graceful Fallback 등 본 백서에 개시된 모든 개념은 제3자의 사적 독점 출원을 방지·완화하기 위한 방어적 선행기술(Prior Art)로 포괄 적용된다.
 * **DPL 라이선스 및 선사용권 —** CC BY 4.0 및 DPL v1.0 라이선스가 적용되며, 대한민국 특허법 제103조 및 미국 특허법 35 U.S.C. §273에 따른 선사용권을 유지한다.
+* **방어적 공개 타임스탬프 (Defensive Publication Timestamp) —** Defensive Publication Date: 2026-09-09 / GitHub Commit: [commit hash] / CC BY 4.0 + DPL v1.0 (CERN Zenodo DOI 연동 예정)
 
 ---
 
@@ -111,6 +116,6 @@ $$H = \alpha \left(1 - \frac{V_{err}}{V_{max}}\right) + \beta \left(\frac{L_p}{2
 
 ---
 
-## Appendix A: Inventorship & AI Disclosure
-* **System Architect & Sole Inventor —** deundeuni (soma-moa)
-* **AI Assistance Disclosure —** 백서의 모든 기술 아키텍처, 햅틱 로직, 법적 방어막은 창안자(deundeuni)의 독자적 구상이며, AI는 창안자의 지휘하에 문장 정제 및 서식 구조화 도구로만 제한적으로 활용되었음.
+## Appendix A: Inventorship & AI Assistance Disclosure
+* **System Architect & Sole Inventor —** deundeuni (soma-moa) — 전체 구상, 현장 동기 제정, 회로 결합 설계 및 기술 의사결정의 독자적·최종적 지적 주체.
+* **AI Assistance Disclosure —** 본 백서의 모든 기술 아키텍처, 햅틱 로직, 연산 수식 및 법적 방어막은 창안자(deundeuni)의 독자적 지적 노동과 현장 직관에 귀속된다. 인공지능 도구(AI models)는 창안자의 명확한 지휘하에 초안 문장 정제, 번역 및 서식 구조화 도구(Auxiliary Text Editing Tools)로만 제한적으로 활용되었으며, 기술적 사상 도출 및 발명 과정에는 관여하지 아니하였음을 명시한다.
