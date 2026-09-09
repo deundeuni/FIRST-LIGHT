@@ -2,9 +2,11 @@
 > **Original Authority Notice:** 본 기술 명세의 법적·공학적 판단 최상위 기준은 한글 원본(`README.ko.md`)에 귀속되며, 영문본은 보조 참조용으로만 기능한다.
 
 # FIRST-LIGHT — 광역·전천후(지상·해양·산악·사막·극지·우주) 무중단 이관(Seamless Transition) 및 다중감각 인프라 앵커링 기반 통합 피난·생존 보조 안내 시스템 기술 명세서
-## 부제: 야외 법정 내구 설비 앵커, 해양 부이, 산악 리피터, 극지 빙하 앵커, 궤도 모듈 및 이종 다중 디바이스 연동 광역 피난·생존 방어적 선행기술 백서
+## 부제: 야외 법정 내구 설비 앵커, 해양 부이, 산악 리피터, 극지 빙하 앵커, 궤도 모듈 및 이종 다중 디바이스 연동 광역 피난·생존 방어적 선행기술 백서 (Ver. 1.0 Lean Master)
 
 * **공식 문서 분류:** 방어적 선행기술 공개 백서 (Defensive Publication / Prior Art)
+* **문서 버전:** Ver. 1.0 Lean Master
+* **최초 구상일:** 2026-09-09 / **최종 개정일:** 2026-09-09
 * **원천 지적재산권(IP) 보유자:** 소마모아 (soma-moa / 구상자: deundeuni)
 * **공식 저장소 및 관문:** github.com/soma-moa | somamoa.ai.kr
 * **적용 라이선스:** Creative Commons Attribution 4.0 (CC BY 4.0) & DPL v1.0 (Defensive Patent License)
@@ -24,7 +26,8 @@
 * **차별화 핵심:** `LAST-LIGHT`가 실내 소방법령(NFPC) 기반 소방함·레이스웨이를 L0 앵커로 삼는다면, `FIRST-LIGHT`는 야외 법정 내구 설비(해양 부이, 산악 리피터, 사막/극지 비콘)를 L0 앵커로 전면 교정하고, 지하 시설 탈출 후 야외 4대 극한 환경으로 이어지는 무중단 위치 제어권 이관(Seamless Transition)을 독자적 신규 발명으로 명시한다.
 
 ### 0.3 야외 법정 내구 인프라 기반 구조 우선 원칙 (Structure First for Outdoor Facilities)
-본 시스템은 센서 수량이나 네트워크 용량이 아닌, 해당 환경의 관련 법령(항만법, 자연공원법, 응급의료법, 해양안전법 등)에 따라 물리적 내환경성·내수압성·내풍설성이 담보된 야외 고정 구조물을 1차 기준점(L0 Anchor)으로 삼는다. 이는 `chiplet-apu`('용량이 아닌 구조') 철학을 광역 공간에 구현한 것이다. 야외 GNSS/GPS 신호는 대략적 구역 식별(Macro Localization)용 하위 보조 신호로만 포섭되며, 고정 인프라 앵커 포착 즉시 0점 교정이 수행된다.
+본 시스템은 센서 수량이나 네트워크 용량이 아닌, 해당 환경의 관련 법령(항만법, 자연공원법, 응급의료법, 해양안전법 등)에 따라 물리적 내환경성·내수압성·내풍설성이 담보된 야외 고정 구조물을 1차 기준점(L0 Anchor)으로 삼는다. 이는 `chiplet-apu`('용량이 아닌 구조') 철학을 광역 공간에 구현한 것이다.
+야외 GNSS 계열(GPS, Galileo, GLONASS, BeiDou 등) 신호는 인접 L0 앵커 간 물리적 이격 거리가 존재하는 구간에 한해, 앵커 미포착 상태의 대략적 위치 추정을 위한 임시·과도기적 보조 신호로만 기능하며, 고정 인프라 앵커 신호 포착 즉시 위성측위 데이터는 0점 교정값으로 전면 대체된다.
 
 ### 0.4~0.5 상위 백서(LAST-LIGHT) 조항 원용 고지 (Incorporation by Reference)
 본 백서의 0.4항(비배타적 상호운용성 및 공용 오픈 표준) 및 0.5항(현장 기반 우선순위 제어 원칙)은 상위 마스터 백서 `LAST-LIGHT`의 해당 조항 규격을 그대로 원용하여 준용한다.
@@ -37,8 +40,8 @@
 
 ## 1. 버전 변경 이력 (Version History)
 
-* **LAST-LIGHT 연계 수용 계보:** 실내·지하·궤도 0점 교정, 함께생존 브릿지, 소방함 내화 앵커, Graceful Fallback 정립.
-* **FIRST-LIGHT 통합 백서 명세:** 실내 중복 설명 축소 원용. 해양·산악·사막·극지 전용 L0 법정 앵커 전면 교체 및 지하-야외 간 무중단 제어권 이관(Seamless Transition)을 단독 핵심 발명으로 명시.
+* **LAST-LIGHT 수용 계보 (v1.0 ~ v4.8):** 실내·지하·궤도 0점 교정, 함께생존 브릿지, 소방함 내화 앵커, Graceful Fallback 정립.
+* **FIRST-LIGHT v1.0 Lean Master (2026-09-09):** **[야외 광역 무중단 이관 통합 백서 최초 공개]** 실내 중복 설명 축소 원용. 최초 구상일(2026-09-09) 명시. 해양·산악·사막·극지 전용 L0 법정 앵커 전면 교체 및 지하-야외 간 무중단 제어권 이관(Seamless Transition)을 단독 핵심 발명으로 명시.
 
 ---
 
@@ -56,10 +59,10 @@
 ### 2.5 공통 신뢰도 평가 레이어 분리 (H-INDICATOR Integration)
 본 광역 프레임워크의 시스템 건강도, 하드웨어 오차, RF 경로 손실, DTN 단절 시간 및 노드 동기화 밀도 산출 연산은 상위 독립 백서 **`H-INDICATOR`** 수식 구조를 직접 참조하여 구동한다.
 
-$$H = \alpha \left(1 - \frac{V_{err}}{V_{max}}\right) + \beta \left(\frac{L_p}{2.6}\right) + \gamma \left(\frac{T_r}{T_o}\right) + \delta (1 - S_{node})$$
+`H = α(1 - V_err / V_max) + β(L_p / 2.6) + γ(T_r / T_o) + δ(1 - S_node)`
 
-* **수식 변수 정의 —** $V_{err}$: 전원 오차 전압, $V_{max}$: 최대 허용 오차 전압, $L_p$: RF 경로 손실, $T_r$: DTN 통신 단절 시간, $T_o$: 유효 수신 주기, $S_{node}$: 주변 메시 노드 동기화 밀도 ($0 \le S_{node} \le 1$). (상세 수식 유도 및 파라미터 제어 논리는 `H-INDICATOR` 백서 정본 참조)
-* **운용 제어 —** 연산 결과 $H > 0.85$ 도출 시 100ms 이내에 삼상 고임피던스(Tri-State Isolation) 격리를 수행함과 동시에 인접 앵커로 제어권을 선조치 이관하는 결정 인덱스로 작동한다.
+* **수식 변수 정의 —** V_err: 전원 오차 전압, V_max: 최대 허용 오차 전압, L_p: RF 경로 손실, T_r: DTN 통신 단절 시간, T_o: 유효 수신 주기, S_node: 주변 메시 노드 동기화 밀도 (0 <= S_node <= 1). (상세 수식 유도 및 파라미터 제어 논리는 `H-INDICATOR` 백서 정본 참조)
+* **운용 제어 —** 연산 결과 H > 0.85 도출 시 100ms 이내에 삼상 고임피던스(Tri-State Isolation) 격리를 수행함과 동시에 인접 앵커로 제어권을 선조치 이관하는 결정 인덱스로 작동한다.
 
 ---
 
@@ -90,7 +93,7 @@ $$H = \alpha \left(1 - \frac{V_{err}}{V_{max}}\right) + \beta \left(\frac{L_p}{2
 본 시스템의 독자적 신규성은 실내/지하 시설을 탈출한 피난자가 야외 극한 환경으로 진입할 때 위치 추정 끊김 없이 0점 교정 제어권을 자율 이관(Handover)하는 데 있다.
 
 * **지하 → 해양 이관 (Underground to Marine) —** 지하주차장/해저터널 L0 앵커를 벗어나는 즉시, 해안가 스마트 부이 및 방파제 L0 앵커의 BLE Auracast/RF 신호가 위치 제어권을 이관받아, 표류자의 구명조끼 내장 브릿지로 햅틱 나침반 신호를 연속 공급한다.
-* **지하 → 산악/사막/극지 이관 (Underground to Wilderness) —** 지하 탈출 직후 지상 GNSS 신호가 불안정한 산악 안개나 극지 화이트아웃 진입 시, 산악 대피소 리피터 및 극지 비콘이 AR HUD 및 스마트 링의 IMU 누적 오차를 즉시 0점으로 리셋(Rapid Drift Reset)한다.
+* **지하 → 산악/사막/극지 이관 (Underground to Wilderness) —** 지하 탈출 직후 지상 GNSS 계열 신호가 불안정한 산악 안개나 극지 화이트아웃 진입 시, 산악 대피소 리피터 및 극지 비콘이 AR HUD 및 스마트 링의 IMU 누적 오차를 즉시 0점으로 리셋(Rapid Drift Reset)한다.
 * **지상 → 궤도 모듈 이관 (Ground to Space) —** 지상 인프라 앵커 구조가 우주정거장 밀폐 거주 모듈 내화 챔버 및 IVA/EVA 우주복 내장 햅틱 패드로 동일한 0점 교정 알고리즘을 유지한다.
 
 ---
@@ -116,6 +119,16 @@ $$H = \alpha \left(1 - \frac{V_{err}}{V_{max}}\right) + \beta \left(\frac{L_p}{2
 
 ---
 
-## Appendix A: Inventorship & AI Assistance Disclosure
+## Appendix A: Inventorship & Legal Ownership
 * **System Architect & Sole Inventor —** deundeuni (soma-moa) — 전체 구상, 현장 동기 제정, 회로 결합 설계 및 기술 의사결정의 독자적·최종적 지적 주체.
+* **원천 권리 귀속 —** 본 백서에 개시된 모든 기술 사상, 햅틱 알고리즘, 인프라 앵커링 메커니즘의 독점적 법적 지적재산권 및 선사용권은 창안자(deundeuni) 개인 및 공식 저장소(soma-moa)에 전적으로 귀속된다.
+
+---
+
+## Appendix B: Version History & Revision Records
+* **v1.0 Lean Master (2026-09-09) —** 최초 정본 백서 공개. 상세 개정 내역 및 수용 계보는 본문 1장 참조.
+
+---
+
+## Appendix C: AI Assistance Disclosure
 * **AI Assistance Disclosure —** 본 백서의 모든 기술 아키텍처, 햅틱 로직, 연산 수식 및 법적 방어막은 창안자(deundeuni)의 독자적 지적 노동과 현장 직관에 귀속된다. 인공지능 도구(AI models)는 창안자의 명확한 지휘하에 초안 문장 정제, 번역 및 서식 구조화 도구(Auxiliary Text Editing Tools)로만 제한적으로 활용되었으며, 기술적 사상 도출 및 발명 과정에는 관여하지 아니하였음을 명시한다.
