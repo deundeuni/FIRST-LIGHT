@@ -7,7 +7,7 @@
 * **Official Document Classification:** Defensive Publication / Prior Art White Paper
 * **Original Intellectual Property (IP) Holder:** soma-moa (Conceiver: deundeuni)
 * **Official Repository & Gateway:** github.com/soma-moa | somamoa.ai.kr
-* **Applicable Licenses:** CC BY 4.0 & DPL v1.0 (Defensive Patent License)
+* **Applicable Licenses:** Creative Commons Attribution 4.0 (CC BY 4.0) & DPL v1.0 (Defensive Patent License)
 * **Master Specification:** `LAST-LIGHT` (Inheriting indoor, underground, and orbital infrastructure anchoring and offline mechanisms)
 * **Keywords:** FIRST-LIGHT, LAST-LIGHT, H-INDICATOR, Universal Survival, Seamless Transition, Structure First, Marine Buoy, Port Act, Mountain Repeater, Natural Parks Act, Polar Anchor, ICE-BELT, Co-Survival Bridge, Haptic Compass, Prior Art, chiplet-apu
 
@@ -25,6 +25,9 @@ This specification directly cites and inherits the baseline engineering architec
 
 ### 0.3 Structure First Principle for Outdoor Facilities
 This system adopts fixed outdoor structures with guaranteed physical resistance against water, wind, snow, and pressure—mandated by relevant statutory regulations (Port Act, Natural Parks Act, Emergency Medical Service Act, Maritime Safety Act)—as primary reference points (L0 Anchor), rather than prioritizing sensor counts or network bandwidth. This materializes the 'Structure over Capacity' philosophy of `chiplet-apu` across wide-area space. Outdoor GNSS/GPS signals are subordinated as secondary macro-localization hints; fixed infrastructure anchors perform immediate 0-point position calibration upon signal capture.
+
+### 0.4–0.5 Master Specification (LAST-LIGHT) Provisions Incorporation
+Provisions 0.4 (Non-Exclusive Interoperability & Open Public Standards) and 0.5 (Operational Priority Principle) of this specification directly inherit and incorporate the corresponding specifications of the master specification `LAST-LIGHT`.
 
 ### 0.6 Universal Application Scope & Wide-Area Route Declaration
 The core scope of protection of this system comprehensively applies to the following wide-area evacuation trajectory:
@@ -55,7 +58,8 @@ System health, hardware voltage error, RF path loss, DTN disconnect duration, an
 
 $$H = \alpha \left(1 - \frac{V_{err}}{V_{max}}\right) + \beta \left(\frac{L_p}{2.6}\right) + \gamma \left(\frac{T_r}{T_o}\right) + \delta (1 - S_{node})$$
 
-When calculation yields $H > 0.85$, it acts as the decision index to execute Tri-State Isolation within 100ms while proactively transferring control to adjacent anchors.
+* **Formula Variable Definitions —** $V_{err}$: Power error voltage, $V_{max}$: Maximum allowable error voltage, $L_p$: RF path loss, $T_r$: DTN communication disruption duration, $T_o$: Valid reception period, $S_{node}$: Surrounding mesh node synchronization density ($0 \le S_{node} \le 1$). (For detailed mathematical derivations and parameter control logic, refer to the master specification `H-INDICATOR`.)
+* **Operational Control —** When calculation yields $H > 0.85$, it acts as the decision index to execute Tri-State Isolation within 100ms while proactively transferring control to adjacent anchors.
 
 ---
 
@@ -64,7 +68,7 @@ When calculation yields $H > 0.85$, it acts as the decision index to execute Tri
 ### A. Environment-Specific L0 Anchors & Legal Survival Grounds
 * **Marine Smart Buoy & Navigational Aid Anchors —** Fixed structures under maritime aids to navigation standards and port regulations, maintaining fixed physical coordinates amidst waves and submersion. Projects BLE Auracast and acoustic signals across water surfaces to deliver 0-point coordinates to life jacket / bridge receivers worn by adrift survivors.
 * **Mountain Shelter & Smart Repeater Anchors —** Managed under natural park regulations, mountain shelters and location-numbered repeaters supply terrain 0-point coordinates to AR glasses and smart rings in mountain fog and signal shadow zones.
-* **Desert/Polar Fixed Beacons & ICE-BELT Anchors —** Glacier bedrock anchors and desert fixed beacons that maintain signal continuity via `MAX-LIFE ICE-BELT` snow/heat armor during whiteouts and sandstorms.
+* **Desert/Polar Fixed Beacons & ICE-BELT Anchors —** Glacier bedrock anchors and desert fixed beacons that maintain signal continuity via `MAX-LIFE ICE-BELT` cold/heat protective casing during whiteouts and sandstorms.
 
 ### B–G. Inherited Mechanisms & Specifications (Citation of LAST-LIGHT)
 * ESTIMATION error calibration, emergency power linkage, self-healing mesh, Co-Survival Bridge standard haptic compass protocol (Left / Right / Forward / Hazard / Reached), WebAR passive QR/NFC quick release, and Visual SLAM 0-point calibration logic directly inherit specifications from `LAST-LIGHT`.
@@ -96,6 +100,7 @@ The standalone novel aspect of this system lies in the autonomous handover of 0-
 * **Original Language Authority Rule —** Legal and technical interpretation of this specification is governed strictly by the Korean original (`README.ko.md`). English and other translations serve solely as secondary references.
 * **Comprehensive Prior Art Coverage —** All concepts disclosed herein—including Seamless Transition across wide-area environments, outdoor L0 anchoring, multi-form-factor Co-Survival Bridges, and multi-device Graceful Fallback—apply broadly as defensive prior art to mitigate private patent monopolization by third parties.
 * **DPL License & Prior Use Rights —** Applies CC BY 4.0 and DPL v1.0 licenses, preserving legal prior use rights under Article 103 of the Korean Patent Act and 35 U.S.C. §273.
+* **Defensive Publication Timestamp —** Defensive Publication Date: 2026-09-09 / GitHub Commit: [commit hash] / CC BY 4.0 + DPL v1.0 (CERN Zenodo DOI pending)
 
 ---
 
@@ -111,6 +116,6 @@ The standalone novel aspect of this system lies in the autonomous handover of 0-
 
 ---
 
-## Appendix A: Inventorship & AI Disclosure
-* **System Architect & Sole Inventor —** deundeuni (soma-moa)
-* **AI Assistance Disclosure —** All core technical architectures, haptic logic, and legal defense frameworks within this white paper belong to the sole human inventor (deundeuni). AI models functioned strictly under explicit human instruction as text refinement and structural formatting tools.
+## Appendix A: Inventorship & AI Assistance Disclosure
+* **System Architect & Sole Inventor —** deundeuni (soma-moa) — Sole intellectual entity responsible for total conceptualization, field motivation establishment, circuit combination design, and final technical decisions.
+* **AI Assistance Disclosure —** All core technical architectures, haptic logic, mathematical formulas, and legal defense frameworks within this white paper belong strictly to the sole human inventor (deundeuni). AI tools (AI models) functioned under explicit human direction solely as auxiliary text refinement, translation, and structural formatting tools (Auxiliary Text Editing Tools), without participating in technical conception or inventive steps.
