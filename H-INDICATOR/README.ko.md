@@ -1,6 +1,6 @@
 # H-INDICATOR v2.0 — 최종 요약 백서 및 신규성·진보성 검증절차 (Executive Summary & Novelty/Inventive Step Verification Procedure)
 
-* **원안 우선 조항 고지**: 본 백서의 한국어 원문이 법적·기술적 기준 원본(Original Authority)이며, 타 언어 번역본은 참고용이다.
+* **원안 우선 조항 고지**: 본 백서의 한국어 원문(`H-INDICATOR/README.ko.md`)이 법적·기술적 기준 원본(Original Authority)이며, 타 언어 번역본은 참고용이다.
 
 ---
 
@@ -10,7 +10,7 @@
 * **문서 분류** — 방어적 선행기술 공개 백서 (Defensive Publication / Prior Art)
 * **공개일** — 최초 구상일: 2026-09-02 / 최종 개정일 (v2.0): 2026-09-14
 * **원천 IP 및 권리 보유자** — somamoa soma-moa (시스템 아키텍트: deundeuni)
-* **공식 저장소 및 관문** — github.com/deundeuni/FIRST-LIGHT (FIRST-LIGHT 저장소 루트 하위 H-Indicator.md 및 OCEAN/ 디렉토리) | github.com/soma-moa | somamoa.ai.kr
+* **공식 저장소 및 관문** — github.com/deundeuni/FIRST-LIGHT (FIRST-LIGHT 저장소 하위 H-INDICATOR/README.ko.md 및 OCEAN/ 디렉토리) | github.com/soma-moa | somamoa.ai.kr
 * **라이선스** — Creative Commons Attribution 4.0 (CC BY 4.0) & DPL v1.0 (Defensive Patent License)
 
 ### AI 도구 활용 및 독자적 저작권·지분 배제 고지 (AI Tool Usage & IP Non-Claim Disclaimer)
@@ -94,7 +94,7 @@ $$H_{\text{indicator}} = \alpha \left(1 - \frac{V_{\text{err}}}{V_{\text{max}}}\
 
 * **소마모아 생태계 저장소 및 학술 식별자 (Ecosystem Repositories & DOIs)**
   * **상위 범용 생존 아키텍처 & APU 연산 제어기 (chiplet-apu-multi-system-survival-architecture, 하위 명세 ARCHITECTURE_STRATEGY.md)** — GitHub: deundeuni / chiplet-apu-multi-system-survival-architecture | CERN Zenodo DOI: 10.5281/zenodo.22374987
-  * **야외 극악 기상 유도 & 환경별 모듈 모체 (FIRST-LIGHT, 하위 디렉토리: OCEAN, DESERT, MOUNTAIN, POLAR 및 명세 H-Indicator.md)** — GitHub: deundeuni / FIRST-LIGHT (극지·해양 특화 생존 모듈 OCEAN 및 H-INDICATOR 백서의 모체 저장소) | CERN Zenodo DOI: 10.5281/zenodo.22683225
+  * **야외 극악 기상 유도 & 환경별 모듈 모체 (FIRST-LIGHT, 하위 디렉토리: OCEAN, DESERT, MOUNTAIN, POLAR 및 H-INDICATOR/README.ko.md)** — GitHub: deundeuni / FIRST-LIGHT (극지·해양 특화 생존 모듈 OCEAN 및 H-INDICATOR 백서의 모체 저장소) | CERN Zenodo DOI: 10.5281/zenodo.22683225
   * **재난 피난 유도 & 보조 인프라 (LAST-LIGHT)** — GitHub: deundeuni / LAST-LIGHT | CERN Zenodo DOI: 10.5281/zenodo.22373189 (신뢰도 검증부 L1 계층 $H_{\text{indicator}}$ 상호 연동 명시)
   * **극지 해양 희생장갑 (MAX-LIFE-ICE-BELT)** — GitHub: deundeuni / MAX-LIFE-ICE-BELT | CERN Zenodo DOI: 10.5281/zenodo.22373686
   * **CWP 배터리 교환 도킹 (CWP-Battery-Swap)** — CERN Zenodo DOI: 10.5281/zenodo.22373538
