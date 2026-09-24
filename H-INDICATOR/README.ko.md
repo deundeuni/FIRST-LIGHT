@@ -1,14 +1,15 @@
-H-INDICATOR v2.1 — 최종 요약 백서 및 신규성·진보성 검증절차 (Executive Summary & Novelty/Inventive Step Verification Procedure)
+
+H-INDICATOR v2.2 — 최종 요약 백서 및 신규성·진보성 검증절차 (Executive Summary & Novelty/Inventive Step Verification Procedure)
 원안 우선 조항 고지: 본 백서의 한국어 원문(H-INDICATOR/README.ko.md)이 법적·기술적 기준 원본(Original Authority)이며, 타 언어 번역본은 참고용이다.
 1. 요약 백서 (Defensive Publication Summary)
- * 문서명 — H-INDICATOR — 야외·등산·극악 기상 환경 위치 불확실성 및 시스템 건강도 추정 H-지표 기반 생존 구조 방어적 선행기술 명세서 (Ver. 2.1)
+ * 문서명 — H-INDICATOR — 야외·등산·극악 기상 환경 위치 불확실성 및 시스템 건강도 추정 H-지표 기반 생존 구조 방어적 선행기술 명세서 (Ver. 2.2)
  * 문서 분류 — 방어적 선행기술 공개 백서 (Defensive Publication / Prior Art)
- * 공개일 — 최초 구상일: 2026-09-02 / 최종 개정일 (v2.1): 2026-09-25
+ * 공개일 — 최초 구상일: 2026-09-02 / 최종 개정일 (v2.2): 2026-09-25
  * 원천 IP 및 권리 보유자 — somamoa soma-moa (시스템 아키텍트: deundeuni)
  * 공식 저장소 및 관문 — github.com/deundeuni/FIRST-LIGHT (FIRST-LIGHT 저장소 하위 H-INDICATOR/README.ko.md 및 OCEAN/ 디렉토리) | github.com/soma-moa | somamoa.ai.kr
  * 라이선스 — Creative Commons Attribution 4.0 (CC BY 4.0) & DPL v1.0 (Defensive Patent License)
 AI 도구 활용 및 독자적 저작권·지분 배제 고지 (AI Tool Usage & IP Non-Claim Disclaimer)
- * Human-in-the-Loop 주도성 — 본 백서의 모든 독창적 발명 사상, 수식 아키텍처, 물리적 타협 교점 도출 및 시스템 설계는 인간 아키텍트(deundeuni / somamoa)가 뉴스, 방송 보도, 학술 문헌, 재난 보도(태풍, 국지성 폭우, 적설, 극지·해양 기상 악화 등 제반 재난 사례) 및 다양한 정보 매체를 통해 획득한 경험과 통찰을 바탕으로 독자적으로 구상함.
+ * Human-in-the-Loop 주도성 — 본 백서의 모든 독창적 발명 사상, 수식 아키텍처, 물리적·생태학적 타협 교점 도출 및 시스템 설계는 인간 아키텍트(deundeuni / somamoa)가 뉴스, 방송 보도, 학술 문헌, 재난 보도(태풍, 국지성 폭우, 적설, 극지·해양 기상 악화 등 제반 재난 사례) 및 다양한 정보 매체를 통해 획득한 경험과 통찰을 바탕으로 독자적으로 구상함.
  * AI 모델의 협업적 보조 역할 정의 — 다중 생성형 AI 모델들은 인간 아키텍트가 정의한 문제 구조와 변수 융합 목적에 따라 국제 전파 규격(ITU-R P.525, P.833, P.840) 분석, 수치 연산 및 주파수 외삽 검증, 텍스트 수식 조판 및 표현 정형화를 수행하는 지적 보조 도구(Auxiliary Analytical & Formatting Tool)로 활용되었음. 본 백서의 모든 모델 선택, 상수 설정 및 기술적 타협점은 인간 아키텍트의 지속적인 교차 검증과 기술적 판단을 거쳐 최종 정련되었음.
  * 외부 AI 제공사 권리 주장 배제 — 본 백서의 공개 내용 및 파생 기술 사상에 대하여 외부 AI 서비스 제공사 및 관련 주체는 표준 수식 참조, 연산 보조, 어휘 생성 또는 교차 검증 이력을 이유로 어떠한 원천 IP, 데이터 소유권, 권리, 지분 또는 로열티도 주장할 수 없음을 명시하여 파생 분쟁 가능성을 완화함.
 핵심 기술 개념 및 통합 수식
@@ -40,17 +41,17 @@ AI 도구 활용 및 독자적 저작권·지분 배제 고지 (AI Tool Usage & 
  * 3) \gamma(T_r/T_o) + \delta(1 - S_{\text{node}}) DTN 단절 지속 및 노드 결합 모델
    * 심사관 예상 쟁점 — 통신 두절 시간에 따라 추측 항법(Dead Reckoning) 오차가 증가하는 현상이 주지상용의 법칙으로 다루어질 가능성이 존재함.
    * 기술적 대응 논리 — 본 수식은 단순 시간 누적이 아닌 IETF RFC 4838/5050/9171 지연 허용 네트워크(DTN, NASA JPL ION 및 DTN7 아키텍처)의 유효 수신 주기(T_o) 대비 단절 시간(T_r)의 비선형 비율과 주변 메시 노드 동기화 밀도((1 - S_{\text{node}}))를 결합 평가함. 이를 통해 지수 산출 결과가 위험 한계치(H_{\text{indicator}} > 0.85)에 도달하면 100ms 이내에 격리 모드로 전환되는 "동적 삼상 제어(Tri-State Isolation) 스위칭의 판단 인덱스로 활용하는 체계"를 선점 정의함.
- * 4) 590nm Amber Beacon 광학 투과 파장 및 색상 분리 광학 설계
+ * 4) 590nm Amber Beacon 광학 투과 파장 및 광학·생태학적 종합 설계
    * 심사관 예상 쟁점 — 안개 및 강우 환경에서 황색/주황색 광원을 사용하는 구성이 기존 안개등 기술이나 특정 파장 공지기술과 유사하게 다루어질 가능성이 존재함.
-   * 기술적 대응 논리 — 590nm 파장 선정은 단순 시감도 최고점 선정이 아님. CIE 1931 명소시 표준 시감도 곡선의 최고점은 555nm(녹색, V=1.0)이나, 555nm 녹색 광원은 ISO 7010 비상구 및 일반 안내 표지판 색상과 간섭·혼동을 유발할 위험이 있음. 이에 본 발명은 기존 피난 표지와의 광학적 색상 혼동을 완화하는 동시에, 산안개, 강우 및 해무 입자 크기(0.5\mu\text{m} \sim 10\mu\text{m})에 대응하는 미 산란(Mie Scattering) 투과율 피크 대역과 유효 명소시 시감도 대역(V(590) \approx 0.757)을 동시 충족하는 "광학적 간섭 완화 및 투과 시인성 타협적 교점(Trade-off Cross-Point)"을 도출하여 590nm(Amber)를 최적 선택한 것임을 정밀하게 명시하여 진보성을 입증함.
+   * 기술적 대응 논리 — 590nm 파장 선정은 단순 시감도 최고점 선정이 아님. CIE 1931 명소시 표준 시감도 곡선의 최고점은 555nm(녹색, V=1.0)이나, 555nm 녹색 광원은 ISO 7010 비상구 및 일반 안내 표지판 색상과 간섭·혼동을 유발할 위험이 있음. 이에 본 발명은 기존 피난 표지와의 광학적 색상 혼동을 완화하는 동시에, 산안개, 강우 및 해무 입자 크기(0.5\mu\text{m} \sim 10\mu\text{m})에 대응하는 미 산란(Mie Scattering) 투과율 피크 대역과 유효 명소시 시감도 대역(V(590) \approx 0.757)을 동시 충족함. 또한, 590nm 파장 선정은 공학적 트레이드오프(CIE 1931 시감도, ISO 7010 표지판 혼동 회피, Mie 산란 안개 투과성) 외에 생태학적 근거도 가짐. Deichmann et al. (2021, Smithsonian Conservation Biology Institute, Insect Conservation and Diversity, 14(2), 247–259, DOI: 10.1111/icad.12479)의 현장실험에 따르면 호박색 필터 조명은 백색광 대비 곤충 유인을 60% 감소시켰으며, Florida Fish and Wildlife Conservation Commission (FWC) & U.S. Fish and Wildlife Service (USFWS)가 공동 개발한 Wildlife Lighting Certification Program은 야생동물 친화 조명 기준으로 560nm 초과 장파장(호박·주황·적색 LED)을 규정하며, 590nm은 이 기준 범위 내에 있음을 확인함. 이를 통해 "광학적 간섭 완화, 대기 투과성, 및 야간 야생동물·곤충 교란 최소화의 복합적 타협적 교점(Trade-off Cross-Point)"을 도출하여 590nm(Amber)를 최적 선택한 것임을 정밀하게 명시하여 진보성을 입증함.
 3. 신규성·진보성 검증절차 (Novelty & Inventive Step Verification Procedure)
 본 절차는 특허 심사 및 선행기술 검토 과정에서 본 발명의 신규성(Novelty)과 진보성(Inventive Step) 요건을 객관적으로 입증하고 기술적 사상의 명확성을 보장하기 위해 체계화한 검증 기준이다.
  * 단계 1: 상위 개념 환원 검증 (Higher-Level Abstraction Verification)
    * 검증 대상 — 계수 2.6 및 L_{\text{ref\_dB}} 정규화의 상위 개념 연동성
    * 검증 절차 — 개별 정량 수치(151dB 등)는 환경 및 하드웨어별 예시적 실시예에 불과함을 명시함. 수식 내 정규화 분모를 임의의 허용 손실 범위 L_{\text{ref\_dB}} \in \text{dB} 범주로 추상화 환원 검증하여, 수치 변경 형태의 후속 출원에 대해서도 동일한 상위 메커니즘의 선행기술 범주로 포괄 대응할 수 있도록 정립함.
- * 단계 2: 광학적 타협 교점 검증 (Theoretical Trade-off Cross-Point Verification)
+ * 단계 2: 광학적·생태학적 타협 교점 검증 (Theoretical & Ecological Trade-off Cross-Point Verification)
    * 검증 대상 — 590nm 광학 파장 선정의 기술적 현저성
-   * 검증 절차 — 단순 시감도 최고점(555nm)의 자의적 채택이 아닌, ISO 7010 비상구 표지 간섭 회피 조건과 미 산란(Mie Scattering) 안개 투과율 및 CIE 1931 유효 시감도(V(590) \approx 0.757)의 독립적 물리·표준 조건 간 최적 교점(Cross-Point) 분석 자료를 제시함. 이를 통해 기술적 선택의 고유한 결합 근거 및 상호작용의 현저성을 검증함.
+   * 검증 절차 — 단순 시감도 최고점(555nm)의 자의적 채택이 아닌, ISO 7010 비상구 표지 간섭 회피 조건과 미 산란(Mie Scattering) 안개 투과율, CIE 1931 유효 시감도(V(590) \approx 0.757), Smithsonian(Deichmann et al., 2021) 곤충 유인 60% 감축 실증 데이터, 및 Florida FWC & USFWS Wildlife Lighting Certification Program(560nm 초과 장파장 기준)의 다중 물리·표준·생태 조건 간 최적 교점(Cross-Point) 분석 자료를 제시함. 이를 통해 기술적 선택의 고유한 결합 근거 및 상호작용의 현저성을 검증함.
  * 단계 3: 동적 삼상 제어 연동 검증 (Dynamic Tri-State Isolation Verification)
    * 검증 대상 — 수치 산출 알고리즘과 하드웨어 제어의 유기적 결합성
    * 검증 절차 — H_{\text{indicator}} 지수 산출 결과가 단순 모니터링에 그치지 않고, H_{\text{indicator}} > 0.85 도출 시 100ms 이내에 APU 하드웨어의 삼상 고임피던스(Tri-State Isolation) 격리 스위칭 신호로 직접 연동되는 하드웨어-소프트웨어 유기적 결합체임을 실증 검증함.
@@ -70,16 +71,16 @@ AI 도구 활용 및 독자적 저작권·지분 배제 고지 (AI Tool Usage & 
  * 통합 건강도 및 위치 불확실성 수식 표기 — H_indicator = alpha*(1-Verr/Vmax) + beta*(Lp/L_ref_dB) + gamma*(Tr/To) + delta*(1-Snode) / H_indicator / health indicator / hazard indicator / isolation index / location uncertainty index
 아카이빙 및 특허 분류 참고 태그 (Archiving & Reference Classification Tags)
  * 데이터 포맷 원칙 — 모든 수식 및 본문은 단순 이미지 렌더링이 아닌 인덱싱 가능한 텍스트 파일(Markdown/LaTeX Source)로 저장소에 저장되며, CERN Zenodo 아카이빙 시 LaTeX 소스 파일이 직접 동봉되어 검색 크롤러의 데이터 추출을 지원합니다.
- * Zenodo 및 글로벌 색인 키워드 — MAPL, Aev, Kl, FSPL, ITU-R P.833, ITU-R P.840, DTN, Tri-State, 590nm, H_indicator, Mie Scattering, Free Space Path Loss, Vegetation Attenuation
+ * Zenodo 및 글로벌 색인 키워드 — MAPL, Aev, Kl, FSPL, ITU-R P.833, ITU-R P.840, DTN, Tri-State, 590nm, H_indicator, Mie Scattering, Free Space Path Loss, Vegetation Attenuation, Deichmann 2021, Florida FWC
  * 국제 특허 분류 참고 태그 (Reference IPC/CPC Tags) — 본 백서의 선행기술 포괄 범주는 탐색 편의를 위해 다음 국제 특허 분류 예시 태그에 매핑됩니다 (단, 아래 태그는 정식 특허 출원 단계에서 변리사의 재검토 및 확정을 거치는 예시적 분류 지표임): H04W 84/18 (Mesh networks), G01S 19/48 (Positioning systems), H04B 7/00 (Radio transmission).
 6. 전파 전파 및 기상 감쇠 모델 교차 검증 (Propagation & Weather Attenuation Cross-Verification)
 본 장은 본 백서에 적용된 정량적 수식 및 상수값들이 규격 기준 체계 및 실제 노드 측정 데이터와 일관성을 형성하는지 증명하는 교차 검증 절차를 기술합니다.
  * ITU-R P.840-9 안개 감쇠 계수 K_l 교차 검증 — P.840-9 규격의 10GHz 본문 연산치(K_l \approx 0.0532 \sim 0.0928\text{ (dB/km)}/(\text{g/m}^3)) 대비 0.915GHz 대역 외삽 연산치(K_l \approx 4.49\times 10^{-4} \sim 7.80\times 10^{-4})의 비율(118.38 \sim 119.17배)은 Rayleigh 산란 이론 비례식 (10 / 0.915)^2 = 119.44배와 오차 0.9% 이내로 엄밀히 정합하여 대수적 타당성을 입증합니다.
  * 태국 열대림 실측 데이터 표본 절차 및 대수 정합성 — 태국 923.2MHz 열대림 실측 논문 원문(MDPI Sensors 2026)에 명시된 바와 같이, 50m부터 1.2km까지 50m 간격으로 설정된 24개 측정 지점(지점당 3회 반복 측정, 총 72개 표본 데이터)에서 수집된 결과에 기반합니다. 1.2km 지점 FSPL 이론 예측 수신 파워(-58.34dBm) 대비 실측 편차(LOS 31.14dB / 숲 56.28dB) 및 식생 추가 감쇠량(25.14dB)은 고정된 수신기 열노이즈 플로어(-117.03dBm) 조건하에서 수신 파워 감쇠와 SNR 감소가 직접 연동되는 대수적 연산 정합성(Mathematical Identity)을 보여줍니다. 로그-거리 회귀 지수 n=3.22는 24개 지점 통계 모델로, ITU-R P.833 포화 한계값 $A_m = 25.14\text{ dB}$는 단일 포화 한계 모델로 각각 분리 다루어 모델 간 혼용 오인을 방지합니다.
 6-2. 겸양고지 및 선행기술 존중과 독자적 아키텍트 권리 고지 (Humble Acknowledgment & Original Architect Authority)
-본 백서 H-INDICATOR v2.1은 독립적인 발명 사상을 방어적 공개로 선점함을 목적으로 하나, 그 기술적 토대는 ITU-R 권고안(P.525/P.833/P.840/P.530), IETF DTN Bundle Protocol(RFC 4838/5050/9171) 및 NASA JPL ION, DTN7, LoRa Alliance, Semtech SX1262 등 선행 연구진, 표준화 기구, 오픈소스 설계자, 상용 모듈 제조사들의 축적된 연구 성과 위에 서 있음을 겸허히 인정합니다.
-특히 태국 치앙라이 라자밧 대학 Boonlom et al.(Sensors 2026, 26, 3192, DOI 10.3390/s26103192) 및 브라질 파라 연방대학 Lima et al.(Sensors 2024, 24, 1621, DOI 10.3390/s24051621)의 열대림 전파 실측 데이터는 본 백서의 L_{\text{veg}} 외부 검증 앵커로서 본질적 기여를 하였음을 밝힙니다.
-동시에, 개별 공지 수식과 외부 실측 데이터베이스를 기초 앵커로 활용하면서도, 다종 환경 변수를 단일 지표 H_{\text{indicator}} 수식으로 정규화 통합한 고유 수식 아키텍처, 광학적 시인성·간섭 타협점(590nm) 도출, 및 실시간 하드웨어 격리 스위칭(Tri-State Isolation)과의 결합 제어 아키텍처는 인간 아키텍트(deundeuni / somamoa)의 독창적 창의 사상과 독자적 설계 영역임을 명확히 정립합니다.
+본 백서 H-INDICATOR v2.2는 독립적인 발명 사상을 방어적 공개로 선점함을 목적으로 하나, 그 기술적 토대는 ITU-R 권고안(P.525/P.833/P.840/P.530), IETF DTN Bundle Protocol(RFC 4838/5050/9171) 및 NASA JPL ION, DTN7, LoRa Alliance, Semtech SX1262 등 선행 연구진, 표준화 기구, 오픈소스 설계자, 상용 모듈 제조사들의 축적된 연구 성과 위에 서 있음을 겸허히 인정합니다.
+특히 태국 치앙라이 라자밧 대학 Boonlom et al.(Sensors 2026, 26, 3192, DOI 10.3390/s26103192) 및 브라질 파라 연방대학 Lima et al.(Sensors 2024, 24, 1621, DOI 10.3390/s24051621)의 열대림 전파 실측 데이터는 본 백서의 L_{\text{veg}} 외부 검증 앵커로서 본질적 기여를 하였으며, Deichmann et al. (2021, Insect Conservation and Diversity, 14(2), 247–259, DOI: 10.1111/icad.12479) 및 Florida FWC & USFWS Wildlife Lighting Certification Program의 야생동물 친화 조명 기준은 590nm 파장의 생태학적 당위성 앵커로 기여하였음을 밝힙니다.
+동시에, 개별 공지 수식과 외부 실측 데이터베이스를 기초 앵커로 활용하면서도, 다종 환경 변수를 단일 지표 H_{\text{indicator}} 수식으로 정규화 통합한 고유 수식 아키텍처, 광학적·생태학적 시인성·간섭·생태 교란 타협점(590nm) 도출, 및 실시간 하드웨어 격리 스위칭(Tri-State Isolation)과의 결합 제어 아키텍처는 인간 아키텍트(deundeuni / somamoa)의 독창적 창의 사상과 독자적 설계 영역임을 명확히 정립합니다.
 본 백서는 기존 특허, 논문, 상용 제품의 권리를 침해하거나 그 진보성을 부정할 의도가 없으며, 유사한 사상이나 수식이 선행 문헌에 존재할 경우 그 우선권을 존중합니다. 본 백서에 의도치 않은 중복이나 누락이 발견될 경우, 해당 선행기술을 본 방어적 공개의 포괄 범주에 포함된 것으로 간주하며, 원천 IP 보유자는 비의도적 생략 고지 조항에 따라 이를 정정·보완할 의사가 있음을 밝힙니다. 본 백서는 경쟁이 아닌 생존 안전 확보를 위한 방어적 선행기술 공유를 목적으로 하며, 모든 선행 연구진과 현장 설계자들에게 깊은 존경을 표합니다.
 7. 실리보호 (Practical Protection)
 5층 방어 체계 (Quintuple Defense Architecture)
@@ -94,6 +95,8 @@ AI 도구 활용 및 독자적 저작권·지분 배제 고지 (AI Tool Usage & 
 외부 학술 및 검증 문헌 식별자 (External Academic & Empirical Sources)
  * 태국 열대림 923.2MHz 실측 앵커 — Boonlom et al., Experimental Comparison and Empirical Path Loss Modeling of LoRa Communication in Line-of-Sight and Forest Environments at 923 MHz, Sensors 2026, 26, 3192 | DOI: 10.3390/s26103192 | PMC: PMC13210814 (치앙라이 라자밧 대학 실측 표본)
  * 브라질 아마존 915MHz 모델 한계 앵커 — Lima et al., LoRa Technology Propagation Models for IoT Network Planning in the Amazon Regions, Sensors 2024, 24, 1621 | DOI: 10.3390/s24051621 (아마존 열대림 RMSE 22~35dB 과소평가 한계 증거)
+ * 스미소니언 곤충 유인 감소 생태 앵커 — Deichmann et al. (2021), Reducing the blue spectrum of artificial light at night minimises insect attraction in a tropical lowland forest, Insect Conservation and Diversity, 14(2), 247–259, DOI: 10.1111/icad.12479 (스미소니언 보전생물학 연구소, 호박색 필터 백색광 대비 곤충 유인 60% 감축 실증)
+ * 플로리다 야생동물 보호청 인증 앵커 — Florida Fish and Wildlife Conservation Commission (FWC) & U.S. Fish and Wildlife Service (USFWS), Wildlife Lighting Certification Program (FWC Wildlife Lighting Criteria: Long-Wavelength >560 nm Amber/Orange/Red Standard)
 국제 기술 표준 및 프로토콜 규격 (International Standards & Protocols)
  * ITU-R P.525-4 — Calculation of free-space attenuation (L_{\text{bf}} = 32.44 + 20\log_{10} f_{\text{MHz}} + 20\log_{10} d_{\text{km}})
  * ITU-R P.833-10 — Attenuation in vegetation (Eq.1: A_{\text{ev}} = A_m [1 - \exp(-d \gamma / A_m)])
