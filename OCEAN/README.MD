@@ -113,11 +113,11 @@ $$S_{node}(t) = f(P_{tx}, G_{ant}, L_{path}) \cdot (1 - D(t))$$
 
 Disconnect Judgment Function:
 
-$$\int_{t_0}^{t_0 + \Delta t} S_{node}(t) \, dt = 0 \implies \text{TRACEBACK\_TRIGGER}$$
+$$\int_{t_0}^{t_0 + \Delta t} S_{node}(t) \, dt = 0 \implies \text{TRACEBACK\\_TRIGGER}$$
 
 Disconnect Position Traceback Signal Strength:
 
-$$P_{trace} = \sum_{k \in \text{Neighbor}} w_k \cdot \text{Last\_Known\_Coord}_k$$
+$$P_{trace} = \sum_{k \in \text{Neighbor}} w_k \cdot \text{Last\\_Known\\_Coord}_k$$
 
 Variable Definitions — D(t): Disconnection function (0: normal, 1: disconnected), Δt: Variable timeout threshold (0.1ms ~ 100ms), w_k: Adjacent node weight vector. When a network disruption occurs, the last known signal transmission coordinates are instantly promoted to critical emergency signals and propagated to neighboring nodes.
 
@@ -129,7 +129,7 @@ $$H_{ocean} = \alpha\left(1 - \frac{V_{err}}{V_{max}}\right) + \beta\left(1 - \f
 
 Isolation and Baton Transfer Condition:
 
-$$H_{ocean} < H_{th} \implies \text{ISOLATE\_AND\_BYPASS}$$
+$$H_{ocean} < H_{th} \implies \text{ISOLATE\\_AND\\_BYPASS}$$
 
 Variable Definitions — V_err: Voltage variation error rate, T_curr: Current node temperature, T_opt: Optimal marine operating temperature threshold, T_crit: Critical temperature range threshold, R_vote: Dynamic confidence voting score among AI agents. When the health index drops below the threshold, the system isolates the affected block within 0.1ms and hands over the computational baton to a standby block. The temperature degradation term β(1 - |T_curr - T_opt|/T_crit) incorporates an absolute value to reflect bidirectional deviations from the optimal operating point (T_opt), accounting for both high-temperature heat and freezing cold. The power degradation term α(1 - V_err/V_max) extends the power attenuation philosophy of the parent white paper H_indicator.
 
