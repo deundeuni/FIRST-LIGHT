@@ -1,106 +1,120 @@
-# H-INDICATOR v2.0 — Executive Summary & Novelty/Inventive Step Verification Procedure
-
-* **Original Authority Notice**: The Korean original text (`H-INDICATOR/README.ko.md`) serves as the primary legal and technical authority (Original Authority). This English translation is provided for reference purposes only.
-
----
-
-## 1. Defensive Publication Summary
-
-* **Document Name** — H-INDICATOR — Defensive Prior Art Specification for Position Uncertainty & System Health Estimation H-Index Survival Architecture in Outdoor/Mountaineering/Severe Weather Environments (Ver. 2.0)
-* **Document Classification** — Defensive Publication / Prior Art
-* **Release Date** — Initial Conception: 2026-09-02 / Final Revision (v2.0): 2026-09-14
-* **Intellectual Property Owner** — somamoa soma-moa (System Architect: deundeuni)
-* **Official Repository & Gateway** — github.com/deundeuni/FIRST-LIGHT (`H-INDICATOR/README.ko.md` under `FIRST-LIGHT` repository and `OCEAN/` directory) | github.com/soma-moa | somamoa.ai.kr
-* **License** — Creative Commons Attribution 4.0 (CC BY 4.0) & DPL v1.0 (Defensive Patent License)
-
-### AI Tool Usage & IP Non-Claim Disclaimer
-* **Human-in-the-Loop Ownership** — All original inventive ideas, mathematical formula architectures, physical trade-off cross-point derivations, and system designs in this specification stem from the independent conception and creative effort of the human architect (deundeuni / somamoa), based on direct and indirect experiences and insights synthesized from news reports, broadcasts, academic literature, disaster reports (typhoons, localized torrential rain, snowfall, severe polar/marine weather cases), and diverse information media.
-* **Auxiliary Role Definition of AI Models** — Multiple generative AI models served purely as auxiliary formatting and standardization tools (Auxiliary Formatting & Standardization Tool) to explore and reference public technical standard formulas (free-space path loss models, power error rates, etc.) and format LaTeX expressions according to the problem structure and parameter fusion objectives defined by the human architect.
-* **Exclusion of External AI Providers' IP Claims** — External AI service providers and related entities cannot claim any primary IP, data ownership, rights, shares, or royalties based on standard formula references, vocabulary generation, or cross-examination histories, thereby mitigating potential derivative disputes.
-
-### Core Technical Concepts & Integrated Formula
-* **Field-Driven Motivation** — Quantifying and mitigating off-route and isolation risks under footprint loss and visibility loss caused by typhoons, heavy rain and gales (wind/rain), illuminance drops due to night/dusk and rapid weather deterioration, snowfall, and fog (visibility shrinking under 10m).
-* **Integrated Formula Architecture** — Core indicator formula fusing hardware power stability, RF path loss, communication disruption duration, and node synchronization state ($H_{\text{indicator}}$):
-
-$$H_{\text{indicator}} = \alpha \left(1 - \frac{V_{\text{err}}}{V_{\text{max}}}\right) + \beta \left(\frac{L_p}{\lambda_c}\right) + \gamma \left(\frac{T_r}{T_o}\right) + \delta (1 - S_{\text{node}})$$
-
-* **Symbol Clarification & FIRST-LIGHT/OCEAN Module Integration** — To prevent symbol collision, this indicator is uniquely designated as $H_{\text{indicator}}$. This is clearly distinguished from the thermal/voting fused health index ($H_{\text{ocean}}$) in the `OCEAN/` directory (polar/marine survival module) under the FIRST-LIGHT repository, while serving as a direct upper prior art technical concept for the first power attenuation term $\alpha(1 - V_{\text{err}}/V_{\text{max}})$ within the $H_{\text{ocean}}$ formula.
-* **Variable & Constant Definitions**
-  * $V_{\text{err}} / V_{\text{max}}$ — Power error rate (Power supply stability index)
-  * $L_p$ — RF path loss (Path Loss)
-  * $\lambda_c$ — Environmental normalization variable ($\lambda_c \in [2.0, 4.5]$, representative scaling denominator example: 2.6)
-  * $T_r / T_o$ — DTN disconnect duration ratio (Disconnection duration $T_r$ to valid reception period $T_o$)
-  * $S_{\text{node}}$ — Surrounding mesh node synchronization density ($0 \le S_{\text{node}} \le 1$)
-  * $\alpha, \beta, \gamma, \delta$ — Weighting coefficients ($\alpha + \beta + \gamma + \delta = 1$, dynamic scaling available)
-* **Operational Interpretation** — Lower $H_{\text{indicator}}$ values represent higher system health and lower path hazard; higher $H_{\text{indicator}}$ values indicate elevated positional uncertainty and isolation hazard.
-* **Upper Architecture Interlinking** — Operates as the highest evaluation layer interlinked with `chiplet-apu-multi-system-survival-architecture v2.6` (sub-specification `ARCHITECTURE_STRATEGY.md v3.2.4` universal survival architecture and Tri-State Isolation technology), parent repository `FIRST-LIGHT` (sub-modules `OCEAN`, `DESERT`, `MOUNTAIN`, `POLAR`), and `LAST-LIGHT` emergency evacuation guidance system.
-
----
-
-## 2. Defensive Logic Review
-
-### 1) $\alpha(1 - V_{\text{err}}/V_{\text{max}})$ Chiplet & Power Health Attenuation Model
-* **Examiner Expected Issue** — Simple voltage monitoring and power noise measurement may be interpreted as public domain technology in electronic circuits.
-* **Technical Response Logic** — Rather than simple shutdowns or binary error resets, the power error rate ($V_{\text{err}}/V_{\text{max}}$) is normalized as compute jitter and reliability degradation indices. This broadly defines a mechanism that preemptively reflects computing reliability drops prior to physical hardware failure into the positional uncertainty index, mitigating potential rejection grounds.
-
-### 2) $\beta(L_p / \lambda_c)$ Path Loss & Conservative Denominator Definition
-* **Examiner Expected Issue** — Dividing path loss by a free-space model or setting denominator coefficient 2.6 may be interpreted as an arbitrary numerical configuration.
-* **Technical Response Logic** — The coefficient 2.6 is a representative scaling denominator (Scaling Factor) derived by adding vegetation and weather attenuation to the free-space path loss exponent ($n=2.0$). This specification is not limited to 2.6; even if substituted with an arbitrary environmental normalization variable $\lambda_c \in [2.0, 4.5]$ varying by field conditions, it expands the prior art scope to encompass the overarching concept of normalizing RF attenuation by a conservative environmental constant and adding it to error variance.
-
-### 3) $\gamma(T_r/T_o) + \delta(1 - S_{\text{node}})$ DTN Disruption Duration & Node Coupling Model
-* **Examiner Expected Issue** — The phenomenon of dead-reckoning error increasing with communication disruption time may be treated as a well-known common principle.
-* **Technical Response Logic** — This formula goes beyond simple time accumulation by evaluating the non-linear ratio of disconnection duration ($T_r$) to valid reception period ($T_o$) under IETF RFC 4838/5050 Delay-Tolerant Networking (DTN) combined with mesh node sync density ($(1 - S_{\text{node}})$). This preemptively defines a system where an $H_{\text{indicator}}$ index reaching the hazard threshold ($H_{\text{indicator}} > 0.85$) triggers isolation mode within 100ms as a decision index for dynamic Tri-State Isolation switching.
-
-### 4) 590nm Amber Beacon Optical Transmission Wavelength & Color Separation Optical Design
-* **Examiner Expected Issue** — Using yellow/amber light sources in fog and rain environments may be treated as similar to conventional fog lamps or public domain wavelength configurations.
-* **Technical Response Logic** — The selection of the 590nm wavelength is not a mere choice of peak visual efficiency. While the CIE 1931 photopic luminous efficiency curve peaks at 555nm (green, $V=1.0$), 555nm green light carries a risk of optical interference and confusion with ISO 7010 exit signs and general emergency guidance signs. Therefore, this invention mitigates optical color confusion with existing evacuation signs while simultaneously satisfying the Mie Scattering transmission peak band for mountain fog, rain, and sea fog particle sizes ($0.5\mu\text{m} \sim 10\mu\text{m}$) and the effective photopic luminous efficiency band ($V(590) \approx 0.757$). By proving the derivation of this "optical interference mitigation and transmission visibility trade-off cross-point", the inventive step is clearly demonstrated.
-
----
-
-## 3. Novelty & Inventive Step Verification Procedure
-
-This procedure systematically structures verification criteria and technical justifications to objectively demonstrate novelty and inventive step during patent examination and prior art review.
-
-* **Step 1: Higher-Level Abstraction Verification**
-  * **Target** — Overarching concept linking of coefficient 2.6 and specific numerical parameters.
-  * **Procedure** — Explicitly state that specific quantitative values are illustrative embodiments. Abstract and verify formula coefficients as arbitrary environmental normalization parameters $\lambda_c \in [2.0, 4.5]$ to cover subsequent filings attempting minor numerical modifications under the same overarching mechanism.
-
-* **Step 2: Theoretical Trade-off Cross-Point Verification**
-  * **Target** — Technical remarkableness of 590nm optical wavelength selection.
-  * **Procedure** — Present analytical data demonstrating the optimal cross-point among independent physical and standard conditions—ISO 7010 exit sign interference avoidance, Mie Scattering fog transmission, and CIE 1931 effective photopic efficiency ($V(590) \approx 0.757$)—rather than an arbitrary choice of peak visual sensitivity (555nm), verifying unique rationale and remarkable synergistic effects.
-
-* **Step 3: Dynamic Tri-State Isolation Verification**
-  * **Target** — Organic coupling between algorithm output and hardware control.
-  * **Procedure** — Verify that $H_{\text{indicator}}$ index calculations do not remain passive monitoring, but actively link to APU hardware Tri-State high-impedance isolation switching signals within 100ms when $H_{\text{indicator}} > 0.85$, demonstrating an integrated hardware-software entity.
-
-* **Step 4: Non-Intentional Omission & Prior Use Right Verification**
-  * **Target** — Prior art coverage scope and shop-right/prior use protection.
-  * **Procedure** — Present immutable GitHub Commit Hashes and CERN Zenodo timestamps, invoking the Non-Intentional Omission Disclaimer alongside Korean Patent Act Article 103 and US 35 U.S.C. §273 prior commercial use rights to solidify prior art validity.
-
----
-
-## 7. Practical Protection
-
-* **Quintuple Defense Architecture**
-  * **Timestamping System** — Proving prior conception timing via immutable GitHub Commit Hashes and CERN Zenodo timestamps.
-  * **DPL License** — Applying Defensive Patent License v1.0 to mitigate private patent monopolization.
-  * **Prior Use Right Preservation** — Maintaining legal prior use rights for field implementations and algorithmic deployments.
-  * **Trade Secret Isolation** — Safeguarding core formulas and theoretical models via defensive publication while isolating specific weight optimization tuning parameters as trade secrets.
-  * **AI IP Non-Claim Defense** — Multiple generative AI models served purely as auxiliary formatting tools (Human-in-the-Loop) to format expressions based on insights synthesized by the human architect from literature and disaster reports. Primary technical ownership belongs exclusively to the human architect (deundeuni / somamoa), legally and technically mitigating data collection, share claims, and IP demands by external AI providers.
-
----
-
-## 8. Sources & Records
-
-* **Ecosystem Repositories & DOIs**
-  * **Upper Universal Survival Architecture & APU Controller (`chiplet-apu-multi-system-survival-architecture`, sub-specification `ARCHITECTURE_STRATEGY.md`)** — GitHub: `deundeuni / chiplet-apu-multi-system-survival-architecture` | CERN Zenodo DOI: `10.5281/zenodo.22374987`
-  * **Outdoor Severe Weather Guidance & Environmental Module Parent (`FIRST-LIGHT`, sub-directories: `OCEAN`, `DESERT`, `MOUNTAIN`, `POLAR`, and `H-INDICATOR/README.ko.md`)** — GitHub: `deundeuni / FIRST-LIGHT` (Parent repository for polar/marine survival module OCEAN and H-INDICATOR specification) | CERN Zenodo DOI: `10.5281/zenodo.22683225`
-  * **Disaster Evacuation Guidance & Auxiliary Infrastructure (`LAST-LIGHT`)** — GitHub: `deundeuni / LAST-LIGHT` | CERN Zenodo DOI: `10.5281/zenodo.22373189` (Reliability verification L1 layer $H_{\text{indicator}}$ interlinking explicitly specified)
-  * **Polar Marine Sacrificial Armor (`MAX-LIFE-ICE-BELT`)** — GitHub: `deundeuni / MAX-LIFE-ICE-BELT` | CERN Zenodo DOI: `10.5281/zenodo.22373686`
-  * **CWP Battery Swap Docking (`CWP-Battery-Swap`)** — CERN Zenodo DOI: `10.5281/zenodo.22373538`
-  * **CWP Electromagnetic Clamping (`CWP-Clamping-Battery-Swap-System`)** — CERN Zenodo DOI: `10.5281/zenodo.22373722`
-  * **CWP Rolling Self-Align (`CWP-Rolling-Self-Align-Battery-Swap-System`)** — CERN Zenodo DOI: `10.5281/zenodo.22373704`
-  * **CWP Entry Guidance & Self-Guide (`CWP-Entry`)** — CERN Zenodo DOI: `10.5281/zenodo.22683234`
-  * **HUD Head-Up Display Linkage (`POLYLINK-HUD`)** — GitHub: `deundeuni / POLYLINK-HUD` | CERN Zenodo DOI: `10.5281/zenodo.22726318`
-  * **Canonical Gateway & Main Repository (`soma-moa`)** — GitHub: `deundeuni / soma-moa` | CERN Zenodo DOI: `10.5281/zenodo.22435773` | Domain: `somamoa.ai.kr`
-* **Non-Intentional Omission & Non-Exhaustive Disclaimer** — The technical standards, public domain principles, statutes, AI auxiliary and formula tools, and repository listings cited herein serve as illustrative examples and do not constitute an exhaustive or rigid limitation. All derivative standards, revised specifications, equivalent mechanisms, and public domain combinations connected to the overarching technical concepts disclosed herein shall be deemed included within the protective prior art scope of this defensive publication.
+H-INDICATOR v2.2 — Executive Summary & Novelty/Inventive Step Verification Procedure
+Notice of Original Authority Priority: The Korean original text (H-INDICATOR/README.ko.md) of this white paper is the legal and technical Original Authority, and translation versions in other languages are for reference purposes only.
+1. Defensive Publication Summary
+ * Document Name — H-INDICATOR — Defensive Prior Art Specification for Survival Structures Based on H-Indicator for Location Uncertainty and System Health Estimation in Outdoor, Mountaineering, and Severe Weather Environments (Ver. 2.2)
+ * Document Classification — Defensive Publication / Prior Art White Paper
+ * Publication Date — Initial Conception Date: 2026-09-02 / Final Revision Date (v2.2): 2026-09-25
+ * Original IP & Rights Holder — somamoa soma-moa (System Architect: deundeuni)
+ * Official Repository & Gateway — github.com/deundeuni/FIRST-LIGHT (FIRST-LIGHT repository sub-path H-INDICATOR/README.ko.md and OCEAN/ directory) | github.com/soma-moa | somamoa.ai.kr
+ * License — Creative Commons Attribution 4.0 (CC BY 4.0) & DPL v1.0 (Defensive Patent License)
+AI Tool Usage & IP Non-Claim Disclaimer
+ * Human-in-the-Loop Leadership — All original inventive ideas, mathematical formula architectures, physical and ecological trade-off cross-point derivations, and system designs in this white paper were independently conceived by the human architect (deundeuni / somamoa) based on direct and indirect experiences and insights gained through news, broadcasts, academic literature, disaster reports (typhoons, localized torrential rains, heavy snowfall, polar/maritime weather deterioration, etc.), and various information media.
+ * Collaborative Auxiliary Role of AI Models — Multi-generative AI models were utilized as intellectual auxiliary tools (Auxiliary Analytical & Formatting Tool) for analyzing international propagation standards (ITU-R P.525, P.833, P.840), performing numerical calculations and frequency extrapolation verifications, and formatting text equations according to the problem structure and variable fusion purpose defined by the human architect. All model selections, constant settings, and technical trade-offs in this white paper were finalized through continuous cross-verification and technical judgment by the human architect.
+ * Exclusion of Third-Party AI Provider Rights — It is explicitly declared that external AI service providers and related entities cannot claim any original IP, data ownership, rights, shares, or royalties based on standard formula referencing, calculation assistance, vocabulary generation, or cross-verification logs regarding the disclosed content and derivative technical concepts of this white paper, thereby mitigating potential derivative disputes.
+Core Technical Concept & Integrated Formula
+ * Field-Based Motivation — Quantifies and mitigates location deviation and isolation risks caused by footprint loss and visibility degradation under severe weather conditions, including typhoons, heavy rain with strong winds, illumination drop after sunset, heavy snowfall, and dense fog (visibility shrinking below 10m).
+ * Integrated Formula Architecture — A proprietary indicator formula (H_{\text{indicator}}) quantifying location uncertainty and system health by fusing hardware power stability, RF path loss, communication disconnection duration, and node synchronization status:
+   
+ * Symbol Clarification & Interlocking with FIRST-LIGHT/OCEAN — The indicator in this white paper is uniquely designated as H_{\text{indicator}} to prevent symbol collision. This is distinctly distinguished from the thermal/voting fused health index (H_{\text{ocean}}) of the OCEAN module (polar/maritime survival module) under the FIRST-LIGHT repository, and serves as an overarching technical concept directly provided to the first power degradation term \alpha(1 - V_{\text{err}}/V_{\text{max}}) in the H_{\text{ocean}} formula.
+Variables & Constants Definition
+ * V_{\text{err}} / V_{\text{max}} — Voltage error rate (power supply stability indicator)
+ * L_p — RF Path Loss. Logarithmically combined path loss of ITU-R P.525 free-space basic loss (L_{\text{bf}}), ITU-R P.833-10 vegetation attenuation (A_{\text{ev}}), and ITU-R P.840-9 fog attenuation (L_{\text{fog}}) (Unit: dB)
+ * L_{\text{ref\_dB}} — Maximum allowable path loss normalization reference value (\text{MAPL} = \text{EIRP} - \text{Sensitivity} - \text{Margin}, Unit: dB). A variable normalizing the ratio of current channel path loss L_p consumed relative to the hardware link budget
+ * T_r / T_o — DTN disconnection time ratio (disconnection duration T_r relative to effective reception period T_o, based on NASA JPL ION RFC 4838/5050/9171 architecture)
+ * S_{\text{node}} — Neighboring mesh node synchronization density (0 \le S_{\text{node}} \le 1)
+ * \alpha, \beta, \gamma, \delta — Weight coefficients (\alpha + \beta + \gamma + \delta = 1, dynamic scaling available)
+ * Operational Interpretation — A lower H_{\text{indicator}} value indicates higher system health and lower path hazard, while a higher H_{\text{indicator}} value signifies increased location uncertainty and isolation hazard.
+ * Overarching System Interlocking — Operates as the highest-level reliability evaluation layer interlocked with chiplet-apu-multi-system-survival-architecture v2.6 (inheriting ARCHITECTURE_STRATEGY.md v3.2.4 generalized survival architecture and Tri-State Isolation technology), the parent repository FIRST-LIGHT (submodules OCEAN, DESERT, MOUNTAIN, POLAR), and the LAST-LIGHT emergency evacuation guidance system.
+2. Defensive Logic & Precise Validation Review
+ * 1) \alpha(1 - V_{\text{err}}/V_{\text{max}}) Chiplet and Power Health Degradation Model
+   * Examiner's Expected Issue — Simple voltage monitoring and power noise measurement may be interpreted as publicly known prior art in electronic engineering.
+   * Technical Counter-Logic — Rather than simple shutdown or error reset, the voltage error rate (V_{\text{err}}/V_{\text{max}}) is normalized as a computation jitter and reliability degradation index. This broadly expands the definition to "a mechanism for proactively reflecting hardware operational reliability degradation prior to physical failure into the location uncertainty index," thereby mitigating patent rejection grounds.
+ * 2) \beta(L_p / L_{\text{ref\_dB}}) Path Loss & Precise Mathematical/Empirical Validation
+   * Examiner's Expected Issue — The L_p normalization denominator may be interpreted as an arbitrary numerical setting.
+   * Technical Counter-Logic — L_p is substantiated as the logarithmic sum (dB) of ITU-R P.525 L_{\text{bf}} + P.833-10 A_{\text{ev}} + P.840-9 L_{\text{fog}}. The normalization denominator is defined not as a dimensionless exponent, but as the Maximum Allowable Path Loss in dB: L_{\text{ref\_dB}} = \text{MAPL} = \text{EIRP} - \text{Sensitivity} - \text{Margin}. Representative Embodiment 1 (LoRa SX1262): \text{TX} = +22\text{dBm}, \text{Sensitivity} = -137\text{dBm} (SF12/BW125kHz), \text{Margin} = 10\text{dB} yields \text{MAPL} = 151\text{dB}. This value is an embodiment example, and when substituting sensitivity values of other modules, L_{\text{ref\_dB}} is recalculated accordingly. Consequently, the \beta-term is expressed as \beta(L_p / L_{\text{ref\_dB}}), where both numerator and denominator are in dB, physically representing a dimensionless ratio quantifying "what percentage of the available total link budget is currently consumed by propagation path loss." This completely eliminates the unit mismatch from v1.0 and encompasses any allowable loss range (L_{\text{ref\_dB}} \in \text{dB}) varying by field modules and configurations beyond 151 dB.
+     * Free-space basic loss (ITU-R P.525): L_{\text{bf}} = 32.44 + 20 \log_{10}(f_{\text{MHz}}) + 20 \log_{10}(d_{\text{km}})\text{ dB}.
+     * Vegetation attenuation model (ITU-R P.833-10 Eq.1): A_{\text{ev}} = A_m [1 - \exp(-d \cdot \gamma / A_m)]\text{ dB}.
+     * Cloud/Fog attenuation model (ITU-R P.840-9): Direct calculation of specific attenuation coefficient K_l based on Double-Debye permittivity formula. Based on 10 GHz specification, K_l \approx 0.0928 at T=0^\circ\text{C} and K_l \approx 0.0532\text{ (dB/km)}/(\text{g/m}^3) at T=20^\circ\text{C}. Extrapolating to 0.915 GHz yields K_l \approx 4.49\times 10^{-4} \sim 7.80\times 10^{-4}, resulting in L_{\text{fog}} \approx 2.2\times 10^{-6} \sim 3.9\times 10^{-6}\text{ dB} under standard moderate fog conditions (M=0.05\text{ g/m}^3, d=0.1\text{ km}). This matches the frequency-squared (f^2) Rayleigh scattering ratio ((10/0.915)^2 = 119.44 vs K_l ratio 118.38\sim119.17) within 0.9% error.
+     * Fresnel Zone Clearance: Based on \lambda = 0.328\text{ m} at 915 MHz, at 100m distance (d_1=50, d_2=50), the 1st Fresnel zone radius r_1 = 2.86\text{ m} (60% minimum height 1.71\text{ m}); at 500m distance, r_1 = 6.40\text{ m} (60% minimum height 3.84\text{ m}).
+     * Thailand Tropical Forest 923.2 MHz 1.2 km Same-Distance Empirical Validation: Measured deviation relative to FSPL theoretical received power (-58.34 dBm) is 31.14 dB (LOS: -89.48 dBm) and 56.28 dB (Forest: -114.62 dBm), yielding an excess vegetation attenuation of 25.14 dB (56.28 - 31.14) and mean excess loss of 24.70 dB across the path. To prevent model mixing, the log-distance regression index (n=3.22 forest / n=2.31 LOS) and ITU-R P.833 saturation attenuation limit (A_m = 25.14\text{ dB}) are separated into independent tracks.
+ * 3) \gamma(T_r/T_o) + \delta(1 - S_{\text{node}}) DTN Disconnection Duration & Node Coupling Model
+   * Examiner's Expected Issue — The phenomenon where Dead Reckoning error increases with communication disconnection duration may be treated as well-known prior art.
+   * Technical Counter-Logic — Rather than simple time accumulation, this formula evaluates the non-linear ratio of disconnection time (T_r) to effective reception period (T_o) based on IETF RFC 4838/5050/9171 Delay-Tolerant Networking (DTN, NASA JPL ION and DTN7 architecture) combined with neighboring mesh node synchronization density ((1 - S_{\text{node}})). This defines a framework where reaching the risk threshold (H_{\text{indicator}} > 0.85) triggers a transition to isolation mode within 100ms, preemptively claiming a judgment index for Dynamic Tri-State Isolation switching.
+ * 4) 590nm Amber Beacon Optical Penetration Wavelength & Optical/Ecological Integrated Design
+   * Examiner's Expected Issue — Using yellow/orange light sources in fog and rain environments may be considered similar to conventional fog lights or known wavelength technologies.
+   * Technical Counter-Logic — Selecting 590nm is not merely choosing the peak photopic sensitivity. While CIE 1931 photopic curve peaks at 555nm (green, V=1.0), green light risks confusion and interference with ISO 7010 exit and safety signs. Thus, the present invention avoids optical color confusion with existing evacuation signs while simultaneously satisfying the Mie scattering penetration peak for mountain fog, rain, and sea mist particles (0.5\mu\text{m} \sim 10\mu\text{m}) and effective photopic sensitivity (V(590) \approx 0.757). Furthermore, selecting 590nm has ecological rationale in addition to engineering trade-offs (CIE 1931 sensitivity, ISO 7010 sign interference avoidance, Mie scattering fog penetration). Field experiments by Deichmann et al. (2021, Smithsonian Conservation Biology Institute, Insect Conservation and Diversity, 14(2), 247–259, DOI: 10.1111/icad.12479) showed that yellow-filtered lighting reduced insect attraction by 60% compared to white light, and the Wildlife Lighting Certification Program developed jointly by the Florida Fish and Wildlife Conservation Commission (FWC) & U.S. Fish and Wildlife Service (USFWS) specifies long-wavelength light (>560 nm, such as amber, orange, and red LEDs) as the wildlife-friendly lighting criteria, confirming that 590nm falls within this official standard range. Establishing this "complex trade-off cross-point of optical interference mitigation, atmospheric penetration, and nocturnal wildlife/insect disruption minimization" proves the inventive step of selecting 590nm (Amber).
+3. Novelty & Inventive Step Verification Procedure
+This procedure establishes objective verification criteria during patent examination and prior art review to prove the novelty and inventive step of the present invention and ensure the clarity of technical concepts.
+ * Step 1: Higher-Level Abstraction Verification
+   * Target — Abstraction of specific coefficient 2.6 and L_{\text{ref\_dB}} normalization
+   * Procedure — Clarifies that individual quantitative values (151 dB, etc.) are merely illustrative embodiments. Abstracting the normalization denominator to an arbitrary allowable loss range L_{\text{ref\_dB}} \in \text{dB} ensures comprehensive prior art coverage against subsequent patent applications with modified numerical values under the same overarching mechanism.
+ * Step 2: Theoretical & Ecological Trade-off Cross-Point Verification
+   * Target — Technical prominence of selecting 590nm optical wavelength
+   * Procedure — Demonstrates that the selection is not an arbitrary adoption of peak photopic sensitivity (555nm), but a trade-off cross-point analysis considering ISO 7010 evacuation sign interference avoidance, Mie scattering fog penetration, CIE 1931 effective photopic sensitivity (V(590) \approx 0.757), Smithsonian empirical data (Deichmann et al., 2021) showing 60% insect attraction reduction, and Florida FWC & USFWS Wildlife Lighting Certification Program (>560 nm long-wavelength standard). This verifies the non-obviousness and unique technical synergism.
+ * Step 3: Dynamic Tri-State Isolation Verification
+   * Target — Organic coupling between numerical algorithm and hardware control
+   * Procedure — Verifies that H_{\text{indicator}} calculation is not passive monitoring, but actively triggers a Tri-State Isolation high-impedance switching signal on APU hardware within 100ms when H_{\text{indicator}} > 0.85, proving an organic hardware-software system.
+ * Step 4: Non-Intentional Omission & Prior Use Right Verification
+   * Target — Scope of prior art coverage and exercise rights protection
+   * Procedure — Presents the GitHub immutable commit hash and CERN Zenodo timestamp records, invoking 'non-intentional omission and non-exhaustive disclaimer' clauses alongside prior use right provisions (e.g., Korean Patent Act Art. 103 / US Patent Act 35 U.S.C. §273) to establish prior art efficacy.
+4. Limitations & Robust Framing
+ * Amazon Rainforest Propagation Model Error — Acknowledges the RMSE 22\sim35\text{ dB} underestimation error when applying standard models to Amazon rainforests as a model limitation, adopting a defensive framing that accompanies additional empirical correction factors and safety margins for dense vegetation design.
+ * ITU-R P.840 Frequency Extrapolation Limitation — Since the official recommendation range of ITU-R P.840-9 is 1 GHz and above, the 0.915 GHz calculation result (L_{\text{fog}} \approx 10^{-6}\text{ dB}) is interpreted as a Rayleigh scattering algebraic extrapolation indicator, confirming a range-based rationale that "fog attenuation has negligible impact on sub-GHz communications."
+ * Regional Limitation of Thailand Empirical Data — The regression index n=3.22 and saturation limit A_m = 25.14\text{ dB} from Thailand tropical forest measurements are site-specific empirical values and are treated as separate empirical constants rather than generalized constants.
+5. Searchability Redundancy & Global Indexing
+To prevent prior art indexing omissions by patent examiners and academic search engines (Google Patents, KIPRIS, STN, PatBase, IEEE Xplore), all core formulas and technical parameters in this white paper are archived applying a triple notation scheme: (a) LaTeX source code, (b) plain ASCII text formulas, (c) English/academic synonym keywords.
+ * Free-space basic loss formula notation — L_bf(dB) = 32.44 + 20*log10(f_MHz) + 20*log10(d_km) / free-space basic transmission loss / FSPL / ITU-R P.525
+ * Vegetation attenuation formula notation — Aev(dB) = Am * (1 - exp(-d*gamma/Am)) / vegetation excess attenuation / woodland propagation attenuation / ITU-R P.833-10 Eq.1 / A_m = 25.14dB tropical forest measured
+ * Cloud/Fog attenuation formula notation — gamma_c(dB/km) = Kl * M , L_fog(dB) = gamma_c * d_km / cloud and fog attenuation / ITU-R P.840-9 Kl / Double-Debye model / Kl ~ 4.49e-4 to 7.8e-4 at 0.915GHz
+ * MAPL normalization notation — L_ref_dB = MAPL = EIRP - Sensitivity - Margin / maximum allowable path loss / link budget / representative embodiment SX1262 MAPL 151dB (22dBm - (-137dBm) - 10dB)
+ * Integrated health index formula notation — H_indicator = alpha*(1-Verr/Vmax) + beta*(Lp/L_ref_dB) + gamma*(Tr/To) + delta*(1-Snode) / H_indicator / health indicator / hazard indicator / isolation index / location uncertainty index
+Archiving & Reference Classification Tags
+ * Data Format Principle — All formulas and body text are stored as indexable text files (Markdown/LaTeX Source) in the repository, and LaTeX source files are directly attached during CERN Zenodo archiving to support search engine crawlers.
+ * Zenodo & Global Index Keywords — MAPL, Aev, Kl, FSPL, ITU-R P.833, ITU-R P.840, DTN, Tri-State, 590nm, H_indicator, Mie Scattering, Free Space Path Loss, Vegetation Attenuation, Deichmann 2021, Florida FWC
+ * Reference IPC/CPC Classification Tags — The prior art coverage scope mapped to reference classification tags for search convenience (subject to attorney review during formal patent filing): H04W 84/18 (Mesh networks), G01S 19/48 (Positioning systems), H04B 7/00 (Radio transmission).
+6. Propagation & Weather Attenuation Cross-Verification
+This section outlines the cross-verification procedures proving that quantitative formulas and constants in this white paper form algebraic consistency with standard specifications and field measurement datasets.
+ * ITU-R P.840-9 Fog Attenuation Coefficient K_l Cross-Verification — Comparing the 10 GHz specification value (K_l \approx 0.0532 \sim 0.0928\text{ (dB/km)}/(\text{g/m}^3)) with the 0.915 GHz extrapolated value (K_l \approx 4.49\times 10^{-4} \sim 7.80\times 10^{-4}) yields a ratio of 118.38 \sim 119.17, matching the theoretical Rayleigh scattering proportion (10 / 0.915)^2 = 119.44 within 0.9% error, proving algebraic validity.
+ * Thailand Tropical Forest Empirical Data Sample Procedure & Mathematical Identity — As specified in the original MDPI Sensors 2026 paper, field data were gathered across 24 measurement points set at 50m increments from 50m to 1.2km (3 repeated measurements per point, totaling 72 sample datasets). Measured deviation relative to FSPL theoretical power (-58.34 dBm) at 1.2km (31.14 dB LOS / 56.28 dB Forest) and excess vegetation loss (25.14 dB) demonstrate mathematical identity with SNR reduction under a fixed receiver thermal noise floor (-117.03 dBm). The log-distance regression exponent n=3.22 represents a 24-point statistical model, whereas ITU-R P.833 saturation limit A_m = 25.14\text{ dB} represents a single saturation limit model, preventing model confusion.
+6-2. Humble Acknowledgment & Original Architect Authority
+This white paper H-INDICATOR v2.2 aims to claim independent inventive ideas via defensive publication, while humbly acknowledging that its technical foundations rest upon accumulated achievements of standard bodies, open-source designers, and researchers, including ITU-R Recommendations (P.525/P.833/P.840/P.530), IETF DTN Bundle Protocols (RFC 4838/5050/9171), NASA JPL ION, DTN7, LoRa Alliance, and Semtech SX1262.
+In particular, tropical forest propagation field datasets from Chiang Rai Rajabhat University (Boonlom et al., Sensors 2026, 26, 3192, DOI: 10.3390/s26103192) and Federal University of Pará (Lima et al., Sensors 2024, 24, 1621, DOI: 10.3390/s24051621) made essential contributions as external verification anchors for L_{\text{veg}}, and Deichmann et al. (2021, Insect Conservation and Diversity, 14(2), 247–259, DOI: 10.1111/icad.12479) alongside Florida FWC & USFWS Wildlife Lighting Certification Program standards contributed as ecological justification anchors for the 590nm wavelength.
+Concurrently, while using public standard formulas and external field databases as foundational anchors, the proprietary formula architecture normalizing multi-environmental variables into a single H_{\text{indicator}} index, the optical/ecological trade-off point (590nm), and the coupled hardware isolation control architecture (Tri-State Isolation) are clearly established as original creative ideas and exclusive design domains of the human architect (deundeuni / somamoa).
+This white paper has no intention to infringe upon existing patents, papers, or commercial products or negate their inventive steps, respecting prior rights where similar concepts exist in prior literature. Should unintended overlap or omission be identified, relevant prior art shall be considered included within the broad scope of this defensive publication, and the original IP holder expresses willingness to correct and supplement under non-intentional omission clauses. This white paper aims for defensive prior art sharing for survival safety, expressing deep respect to all prior researchers and field designers.
+7. Practical Protection
+Quintuple Defense Architecture
+ * Timestamping Scheme — Proof of prior conception timing based on immutable GitHub commit hashes and CERN Zenodo timestamps.
+ * DPL License — Defensive Patent License v1.0 applied to prevent private monopolization by third parties.
+ * Prior Use Right Retention — Maintenance of legal Prior Use Rights regarding field deployment and algorithm implementation.
+ * Trade Secret Separation — Core formulas and theoretical models are defended via public white paper, while detailed weight tuning optimization parameters and filter coefficients are retained as non-disclosed Trade Secrets.
+ * AI Copyright/Share Exclusion Defense — Multi-generative AI models were utilized as intellectual auxiliary tools (Human-in-the-Loop) assisting calculation and formatting under human architect guidance. Ownership of original technical ideas belongs exclusively to the human architect (deundeuni / somamoa), legally and technically mitigating data harvesting, equity demands, and IP claims by external AI providers.
+Disclaimer & AS-IS Notice
+The H_{\text{indicator}} integrated formula, propagation algebraic models, parameters, and weight coefficients disclosed in this white paper are provided 'AS-IS' for defensive publication purposes. The original IP holder provides no express or implied warranties regarding fitness for a particular purpose, field operational faultlessness, or real-time control perfection. Final responsibility for outcomes resulting from building or operating hardware or software using prior art ideas from this white paper rests entirely with the implementing entity.
+8. Sources & Records
+External Academic & Empirical Sources
+ * Thailand Tropical Forest 923.2MHz Empirical Anchor — Boonlom et al., Experimental Comparison and Empirical Path Loss Modeling of LoRa Communication in Line-of-Sight and Forest Environments at 923 MHz, Sensors 2026, 26, 3192 | DOI: 10.3390/s26103192 | PMC: PMC13210814
+ * Brazil Amazon 915MHz Model Limitation Anchor — Lima et al., LoRa Technology Propagation Models for IoT Network Planning in the Amazon Regions, Sensors 2024, 24, 1621 | DOI: 10.3390/s24051621 (Evidence of RMSE 22~35dB underestimation limitation)
+ * Smithsonian Insect Attraction Reduction Ecological Anchor — Deichmann et al. (2021), Reducing the blue spectrum of artificial light at night minimises insect attraction in a tropical lowland forest, Insect Conservation and Diversity, 14(2), 247–259, DOI: 10.1111/icad.12479 (Smithsonian Conservation Biology Institute, 60% insect attraction reduction demonstration)
+ * Florida FWC Certification Anchor — Florida Fish and Wildlife Conservation Commission (FWC) & U.S. Fish and Wildlife Service (USFWS), Wildlife Lighting Certification Program (FWC Wildlife Lighting Criteria: Long-Wavelength >560 nm Amber/Orange/Red Standard)
+International Standards & Protocols
+ * ITU-R P.525-4 — Calculation of free-space attenuation (L_{\text{bf}} = 32.44 + 20\log_{10} f_{\text{MHz}} + 20\log_{10} d_{\text{km}})
+ * ITU-R P.833-10 — Attenuation in vegetation (Eq.1: A_{\text{ev}} = A_m [1 - \exp(-d \gamma / A_m)])
+ * ITU-R P.840-9 — Attenuation due to clouds and fog (\gamma_c = K_l \cdot M)
+ * ITU-R P.530-18 — Propagation data and prediction methods required for terrestrial line-of-sight systems
+ * IETF RFC 4838 — Delay-Tolerant Networking Architecture
+ * IETF RFC 5050 — Bundle Protocol Specification (NASA JPL ION linked)
+ * IETF RFC 9171 — Bundle Protocol Version 7 (DTN7 linked)
+ * CIE 1931 — Photopic luminosity function V(\lambda), effective photopic sensitivity V(590\text{nm}) \approx 0.757
+ * ISO 7010 — Graphical symbols — Safety colours and safety signs (Emergency exit sign interference avoidance rationale)
+Ecosystem Repositories & DOIs
+ * Upper Generalized Survival Architecture & APU Controller (chiplet-apu-multi-system-survival-architecture, sub-spec ARCHITECTURE_STRATEGY.md) — GitHub: deundeuni / chiplet-apu-multi-system-survival-architecture | CERN Zenodo DOI: 10.5281/zenodo.22374987
+ * Outdoor Severe Weather Guidance & Environmental Parent Module (FIRST-LIGHT, sub-directories: OCEAN, DESERT, MOUNTAIN, POLAR & H-INDICATOR/README.ko.md) — GitHub: deundeuni / FIRST-LIGHT | CERN Zenodo DOI: 10.5281/zenodo.22683225
+ * Disaster Evacuation Guidance & Auxiliary Infrastructure (LAST-LIGHT) — GitHub: deundeuni / LAST-LIGHT | CERN Zenodo DOI: 10.5281/zenodo.22373189
+ * Polar/Maritime Sacrificial Armor (MAX-LIFE-ICE-BELT) — GitHub: deundeuni / MAX-LIFE-ICE-BELT | CERN Zenodo DOI: 10.5281/zenodo.22373686
+ * CWP Battery Swap Docking (CWP-Battery-Swap) — CERN Zenodo DOI: 10.5281/zenodo.22373538
+ * CWP Electromagnetic Clamping (CWP-Clamping-Battery-Swap-System) — CERN Zenodo DOI: 10.5281/zenodo.22373722
+ * CWP Rolling Self-Align (CWP-Rolling-Self-Align-Battery-Swap-System) — CERN Zenodo DOI: 10.5281/zenodo.22373704
+ * CWP Entry Guidance (CWP-Entry) — CERN Zenodo DOI: 10.5281/zenodo.22683234
+ * HUD Interlocking (POLYLINK-HUD) — GitHub: deundeuni / POLYLINK-HUD | CERN Zenodo DOI: 10.5281/zenodo.22726318
+ * Main Gateway Repository (soma-moa) — GitHub: deundeuni / soma-moa | CERN Zenodo DOI: 10.5281/zenodo.22435773 | Gateway Domain: somamoa.ai.kr
+ * Non-Intentional Omission & Non-Exhaustive Disclaimer — Cited technical standards, principles, laws, AI auxiliary tools, calculation utilities, and repository lists are illustrative rather than restrictive. All derivative standards, revised specs, equivalent mechanisms, and prior art combinations connected to the overarching technical idea are considered encompassed within the prior art scope of this defensive publication white paper.
