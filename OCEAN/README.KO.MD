@@ -112,11 +112,11 @@ $$S_{node}(t) = f(P_{tx}, G_{ant}, L_{path}) \cdot (1 - D(t))$$
 
 단절 발생 판단 함수 — ASCII 표기: integral_{t0}^{t0 + delta_t} S_node(t) dt = 0 => TRACEBACK_TRIGGER
 
-$$\int_{t_0}^{t_0 + \Delta t} S_{node}(t) \, dt = 0 \implies \text{TRACEBACK\_TRIGGER}$$
+$$\int_{t_0}^{t_0 + \Delta t} S_{node}(t) \, dt = 0 \implies \text{TRACEBACK\\_TRIGGER}$$
 
 단절 위치 역추정 신호 강도 — ASCII 표기: P_trace = sum_{k in Neighbor} w_k * Last_Known_Coord_k
 
-$$P_{trace} = \sum_{k \in \text{Neighbor}} w_k \cdot \text{Last\_Known\_Coord}_k$$
+$$P_{trace} = \sum_{k \in \text{Neighbor}} w_k \cdot \text{Last\\_Known\\_Coord}_k$$
 
 주요 변수 정의 — D(t): 단절 함수 (0: 정상, 1: 단절), Δt: 임계 타임아웃(0.1ms ~ 100ms 가변), w_k: 인접 노드 가중치. 네트워크 끊김 발생 시 마지막 신호 송신 지점의 좌표가 즉각 위급 상황 신호로 승격되어 인접 노드로 전파된다.
 
@@ -128,7 +128,7 @@ $$H_{ocean} = \alpha\left(1 - \frac{V_{err}}{V_{max}}\right) + \beta\left(1 - \f
 
 격리 및 바통 이행 조건식 — ASCII 표기: H_ocean < H_th => ISOLATE_AND_BYPASS
 
-$$H_{ocean} < H_{th} \implies \text{ISOLATE\_AND\_BYPASS}$$
+$$H_{ocean} < H_{th} \implies \text{ISOLATE\\_AND\\_BYPASS}$$
 
 주요 변수 정의 — V_err: 전압 변동 오류율, T_curr: 현재 노드 온도, T_opt: 해양 최적 동작 임계 온도, T_crit: 임계 한계 온도 범위, R_vote: AI 에이전트 간 동적 신뢰도 투표 점수. 건전성 지수가 임계값 미만으로 하락 시 0.1ms 내 해당 블록을 고속 격리하고 예비 블록으로 연산 바통을 넘긴다. 두 번째 온도 감쇄 항 β(1 - |T_curr - T_opt|/T_crit)는 최적 동작점(T_opt)을 기준으로 고온 및 결빙 저온 양방향 편차를 올바르게 감쇄 반영하도록 절댓값이 적용되어 정밀 고찰되었다. 첫 번째 전원 감쇄 항 α(1 - V_err/V_max)는 모체 백서 H_indicator의 전원 감쇄 기술 사상을 상위 연용하여 정립되었다.
 
