@@ -1,10 +1,10 @@
-DESERT DESIGN v1.0 — 사막·오아시스·마을 연계 보급 및 생태 보호형 무중단 조립형 생존 아키텍처 통합 기술 명세서 (FIRST-LIGHT/DESERT)
+DESERT DESIGN v1.1 — 사막·오아시스·마을 연계 보급 및 생태 보호형 무중단 조립형 생존 아키텍처 통합 기술 명세서 (FIRST-LIGHT/DESERT)
 
- * 공식 문서 분류: 방어적 선행기술 공개 백서 (Defensive Publication / Prior Art White Paper)
- * 최초 구상일: 2026-09-06 / 최종 개정일: 2026-09-25 (v1.0)
- * 원천 지적재산권(IP) 보유자: 소마모아 (soma-moa / 구상자: deundeuni)
- * 공식 저장소: github.com/soma-moa/FIRST-LIGHT (상세 경로: DESERT/README.md) | 공식 도메인: somamoa.ai.kr
- * 적용 라이선스: CC BY 4.0 & DPL v1.0 (Defensive Patent License v1.0)
+* 공식 문서 분류: 방어적 선행기술 공개 백서 (Defensive Publication / Prior Art White Paper)
+* 최초 구상일: 2026-09-06 / 최종 개정일: 2026-09-26 (v1.1)
+* 원천 지적재산권(IP) 보유자: 소마모아 (soma-moa / 구상자: deundeuni)
+* 공식 저장소: github.com/soma-moa/FIRST-LIGHT (상세 경로: DESERT/README.md) | 공식 도메인: somamoa.ai.kr
+* 적용 라이선스: CC BY 4.0 & DPL v1.0 (Defensive Patent License v1.0)
 
 원안 우선 조항 고지: 본 백서의 한국어 원문(FIRST-LIGHT/DESERT/README.md)이 법적·기술적 기준 원본(Original Authority)이며, 타 언어 번역본은 참고용이다. 해석상 충돌 또는 의미상 차이 발생 시 한국어 원문의 서술과 정의를 최우선으로 적용한다.
 
@@ -20,12 +20,12 @@ DESERT DESIGN v1.0 — 사막·오아시스·마을 연계 보급 및 생태 보
 
 하부 연산/제어 계층에는 "구현 수단 무관 조립형(Chiplet/Modular) 자가치유 구조"를 융합하여, 단절 발생 자체가 재난 신호로 역추적되고 0.1ms 국소 선조치 및 80% 단계 예지적 예측 유도가 무중단으로 작동하는 '생존 아키텍처'를 창안하였다.
 
- * 역할 — 기존: 중앙 관제 종속형 정적 모니터링 / 본 발명(FIRST-LIGHT/DESERT): 인프라 단절 상황에서 생존 보급 및 대피 경로를 동적으로 생성함
- * 전제 조건 — 기존: 상용 통신, 위성망, 외부 전력이 정상 가동될 때 작동함 / 본 발명: 모래폭풍, 급격한 정전, 인프라 단절(Zero-Infrastructure) 환경을 전제로 작동함
- * 좌표 개념 — 기존: 절대 지리 좌표 그 자체 / 본 발명: 고정 인프라를 빌려 쓰는 상대 좌표 기준점(xy-Point Anchor) 및 참고용 보조 앵커(Reference Ephemeral Anchor)
- * 실패 대처 — 기존: 네트워크 끊김 시 전체 시스템 우회 불능 위험 / 본 발명: 가장 가까운 앵커 기준점으로 재부팅하여 생존 신호를 즉시 역추적 생성함
- * 관계성 및 고정 방식 — 기존: 대체 대상 / 본 발명: 기존 안전 구조물 및 고정 지형 위에 올라타서 활용하는 비침습적 플랫폼
- * 핵심 철학 — 사막 인프라는 대체 대상이 아니다. 주소가 없는 사막에서 고정 암반과 보급소 구조물은 개인이 의지할 유일한 xy좌표 기준점이다. FIRST-LIGHT는 그 기준점을 멀리서도 보이게 만들고, DESERT는 그 점들 위에서 작동하는 무중단 생존 프로토콜이다.
+* 역할 — 기존: 중앙 관제 종속형 정적 모니터링 / 본 발명(FIRST-LIGHT/DESERT): 인프라 단절 상황에서 생존 보급 및 대피 경로를 동적으로 생성함
+* 전제 조건 — 기존: 상용 통신, 위성망, 외부 전력이 정상 가동될 때 작동함 / 본 발명: 모래폭풍, 급격한 정전, 인프라 단절(Zero-Infrastructure) 환경을 전제로 작동함
+* 좌표 개념 — 기존: 절대 지리 좌표 그 자체 / 본 발명: 고정 인프라를 빌려 쓰는 상대 좌표 기준점(xy-Point Anchor) 및 참고용 보조 앵커(Reference Ephemeral Anchor)
+* 실패 대처 — 기존: 네트워크 끊김 시 전체 시스템 우회 불능 위험 / 본 발명: 가장 가까운 앵커 기준점으로 재부팅하여 생존 신호를 즉시 역추적 생성함
+* 관계성 및 고정 방식 — 기존: 대체 대상 / 본 발명: 기존 안전 구조물 및 고정 지형 위에 올라타서 활용하는 비침습적 플랫폼
+* 핵심 철학 — 사막 인프라는 대체 대상이 아니다. 주소가 없는 사막에서 고정 암반과 보급소 구조물은 개인이 의지할 유일한 xy좌표 기준점이다. FIRST-LIGHT는 그 기준점을 멀리서도 보이게 만들고, DESERT는 그 점들 위에서 작동하는 무중단 생존 프로토콜이다.
 
 ### Abstract (영문 초록)
 
@@ -57,7 +57,7 @@ This specification discloses a zero-downtime modular survival architecture (FIRS
 
 ### 0.7 면책 조항 및 AS-IS 보증 한계 (Disclaimer & AS-IS Notice)
 
-본 백서에 개시된 H 통합 수식, 모래폭풍 광학·열선 릴레이 모델, 단절 역추정 알고리즘, 파라미터 및 가중치 계수는 기술 사상의 방어적 공개(Defensive Publication)를 목적으로 '있는 그대로(AS-IS)' 제공된다. 원천 IP 보유자는 본 수식 및 물리 모델의 특정 목적 적합성, 현장 적용 시의 무오류성, 또는 실시간 제어의 완벽성에 대하여 명시적·묵시적 보증을 제공하지 않는다. 본 백서의 선행기술 사상을 원용하여 개별 하드웨어 또는 소프트웨어를 구축·운용함에 따라 발생하는 결과에 대한 최종 책임은 전적으로 해당 구현 주체에게 있다. 본 시스템은 기존 법정 재난 안전 설비 규정을 직접 대체하지 않으며 보조적·참고적 보호 아키텍처로서만 활용된다.
+본 백서에 개시된 H_desert 통합 수식, 모래폭풍 광학·열선 릴레이 모델, 단절 역추정 알고리즘, 파라미터 및 가중치 계수는 기술 사상의 방어적 공개(Defensive Publication)를 목적으로 '있는 그대로(AS-IS)' 제공된다. 원천 IP 보유자는 본 수식 및 물리 모델의 특정 목적 적합성, 현장 적용 시의 무오류성, 또는 실시간 제어의 완벽성에 대하여 명시적·묵시적 보증을 제공하지 않는다. 본 백서의 선행기술 사상을 원용하여 개별 하드웨어 또는 소프트웨어를 구축·운용함에 따라 발생하는 결과에 대한 최종 책임은 전적으로 해당 구현 주체에게 있다. 본 시스템은 기존 법정 재난 안전 설비 규정을 직접 대체하지 않으며 보조적·참고적 보호 아키텍처로서만 활용된다.
 
 ### 0.8 독립적 선행 구상 인정, 겸양 고지 및 비의도적 생략 고지 (Humble Acknowledgment & Non-Intentional Omission)
 
@@ -69,28 +69,29 @@ This specification discloses a zero-downtime modular survival architecture (FIRS
 
 ## 1. 버전 변경 이력
 
- * v0.1 Draft (2026-09-06) — FIRST-LIGHT/DESERT 초안 구상. 마을-보급소 봉화 릴레이, 참고용 보조 앵커(Reference Ephemeral Anchor) 조항, SAND-BELT 진동 수확 연동, 생태 저영향 저전력 유도 및 3무 방어 원칙(Layer/Topology/Timing-Agnostic) 정립.
- * v1.0 (2026-09-25) — FIRST-LIGHT/DESERT 1.0 통합 표준 정본 확정. 복사 과정에서 유실되었던 3-B 공학 수식 5종 중 4종(단절 발생 판단, 역추정 신호 강도, 건전성 지수, 격리·바통 조건식) 원본 대조 후 재삽입 완료 및 GFM/KaTeX `\\_` 이중 이스케이프 수칙 준수 적용. 정상 상태 텔레메트리 수신 함수 본식은 원본 미확인으로 재확인 대기 중(각주만 유지). 사막 환경 극심 일교차(고온 및 야간 결빙) 대응 절댓값 온도 감쇄 수식 정밀화, Zenodo DOI 출처 원복, AS-IS 면책/겸양 고지/비의도적 생략 및 다중 AI 모델(Meta AI, Gemini, Claude) 보조 활용 통합 표기 확정.
+* v0.1 Draft (2026-09-06) — FIRST-LIGHT/DESERT 초안 구상. 마을-보급소 봉화 릴레이, 참고용 보조 앵커(Reference Ephemeral Anchor) 조항, SAND-BELT 진동 수확 연동, 생태 저영향 저전력 유도 및 3무 방어 원칙(Layer/Topology/Timing-Agnostic) 정립.
+* v1.0 (2026-09-25) — FIRST-LIGHT/DESERT 1.0 통합 표준 정본 확정. 복사 과정에서 유실되었던 3-B 공학 수식 5종 재삽입, 사막 환경 극심 일교차(고온 및 야간 결빙) 대응 절댓값 온도 감쇄 수식 정밀화, Zenodo DOI 출처 원복, AS-IS 면책/겸양 고지/비의도적 생략 및 다중 AI 모델(Meta AI, Gemini, Claude) 보조 활용 통합 표기 확정.
+* v1.1 (2026-09-26) — 3장 B절 칩렛 건전성 지수 기호를 H에서 H_desert로 개명하여 OCEAN 명세서의 H_ocean 및 모체 백서 H_indicator와의 기호 충돌을 실제 표기 레벨에서 해소(기존에는 "독립 지표" 선언만 있고 기호 자체는 미개명 상태였던 것을 정정). 정상 상태 텔레메트리 수신 함수 등 3-B 수식 5종 전체가 본문에 정상 삽입되어 있음을 확인하고 1장 이력의 "재확인 대기 중" 문구를 삭제. 수식 미사용 변수(R_vote)를 변수 정의 목록에서 정리. H-INDICATOR/POLAR 표기법을 원용하여 3-B 전 수식에 ASCII 코드블록 병기 추가.
 
 ## 2. 풀스택 응용 구조 설계 (3-Tier Architecture)
 
 **[L2] 보호 및 유도 인터페이스 레이어 (Protective & Guidance Interface Layer)**
 
- * 마을/거점 구간 (Zone BASE) — 마을 물탱크, 보급소 컨테이너, 고정 암반을 좌표 기준점으로 고정하여 모래폭풍, 정전 발생 시 590nm(580-600nm 포괄) 앰버/열선 융합 LED로 대피원의 진입을 시각적·열적으로 선조치 유도한다.
- * 오아시스/생태 구간 (Zone OASIS) — 오아시스 수계 및 동식물 서식지를 참고용 보조 앵커(Reference Ephemeral Anchor)로 관리한다. YOLO 열화상 카메라로 야생동물 이동 감지 시 조명 및 소음을 자동 OFF하는 생태 저영향 저전력 운용 원칙을 적용한다.
- * 듄/이동 사구 구간 (Zone DUNE-CORRIDOR) — 모래언덕 이동 구역에 앵커를 설치하여 LiDAR 변위로 매몰을 예측하고 팀 단위 자율 제어를 수행한다. TTL(Time-To-Live) 기반 임시 앵커로 관리하며, 매몰 또는 소멸 시 EXPIRED 상태로 전환 처리한다.
- * 고온 연산 생존 구간 (Zone THERMAL-SYSTEM) — 고온 반도체 칩렛 및 제어 블록에 적용되어 폭염 및 전력 섭란 시 자가 냉각 유지 및 대칭 자율 바이패스를 실행한다.
+* 마을/거점 구간 (Zone BASE) — 마을 물탱크, 보급소 컨테이너, 고정 암반을 좌표 기준점으로 고정하여 모래폭풍, 정전 발생 시 590nm(580-600nm 포괄) 앰버/열선 융합 LED로 대피원의 진입을 시각적·열적으로 선조치 유도한다.
+* 오아시스/생태 구간 (Zone OASIS) — 오아시스 수계 및 동식물 서식지를 참고용 보조 앵커(Reference Ephemeral Anchor)로 관리한다. YOLO 열화상 카메라로 야생동물 이동 감지 시 조명 및 소음을 자동 OFF하는 생태 저영향 저전력 운용 원칙을 적용한다.
+* 듄/이동 사구 구간 (Zone DUNE-CORRIDOR) — 모래언덕 이동 구역에 앵커를 설치하여 LiDAR 변위로 매몰을 예측하고 팀 단위 자율 제어를 수행한다. TTL(Time-To-Live) 기반 임시 앵커로 관리하며, 매몰 또는 소멸 시 EXPIRED 상태로 전환 처리한다.
+* 고온 연산 생존 구간 (Zone THERMAL-SYSTEM) — 고온 반도체 칩렛 및 제어 블록에 적용되어 폭염 및 전력 섭란 시 자가 냉각 유지 및 대칭 자율 바이패스를 실행한다.
 
 **[L1] 희생·연산 패브릭 레이어 (Sacrificial & Compute Fabric Layer)**
 
- * 하부 뼈대 및 패브릭 구조 — TL Bridge 및 Interconnect 패브릭을 매개로 분리된 개별 칩렛(연산, 메모리, I/O, 센서 제어) 모듈 집합체로서, 단일 결함 발생 시 해당 블록을 고속 격리한다.
- * 릴레이 및 광학/열선 유도 구조 — 590nm 앰버 파장(580-600nm 범위 포괄)과 내열 차폐가 융합된 광학 릴레이 체인을 구성하여 모래폭풍 및 먼지 차일 속에서 가시성을 확보한다.
- * 자가치유 및 단절 역추정 알고리즘 — 노드 또는 통신 단절 감지 시 0.1ms 이내에 국소 격리를 수행하고, 단절 발생 좌표 및 마지막 텔레메트리 상태를 역추적하여 인접 보급소, 팀 및 상위 관제로 통보한다.
+* 하부 뼈대 및 패브릭 구조 — TL Bridge 및 Interconnect 패브릭을 매개로 분리된 개별 칩렛(연산, 메모리, I/O, 센서 제어) 모듈 집합체로서, 단일 결함 발생 시 해당 블록을 고속 격리한다.
+* 릴레이 및 광학/열선 유도 구조 — 590nm 앰버 파장(580-600nm 범위 포괄)과 내열 차폐가 융합된 광학 릴레이 체인을 구성하여 모래폭풍 및 먼지 차일 속에서 가시성을 확보한다.
+* 자가치유 및 단절 역추정 알고리즘 — 노드 또는 통신 단절 감지 시 0.1ms 이내에 국소 격리를 수행하고, 단절 발생 좌표 및 마지막 텔레메트리 상태를 역추적하여 인접 보급소, 팀 및 상위 관제로 통보한다.
 
 **[L0] 인프라 및 고정 레이어 (Infrastructure & Fastening Layer)**
 
- * 물리적 인프라 모재 — 마을 외벽, 보급소 프레임, 고정 암반, 고온 연산 인터포저 및 프레임을 포함한다.
- * 비침습 고정 메커니즘 — 모재의 용접이나 관통 구멍을 배제하고, 에지 클램핑, 롤링 락, 고온 열팽창 흡수 클램프, 전자기/영구자석 클램프 및 패브릭 인터커넥트 브리지를 통해 0점 고정력을 유지한다.
+* 물리적 인프라 모재 — 마을 외벽, 보급소 프레임, 고정 암반, 고온 연산 인터포저 및 프레임을 포함한다.
+* 비침습 고정 메커니즘 — 모재의 용접이나 관통 구멍을 배제하고, 에지 클램핑, 롤링 락, 고온 열팽창 흡수 클램프, 전자기/영구자석 클램프 및 패브릭 인터커넥트 브리지를 통해 0점 고정력을 유지한다.
 
 ### 2.5 온디바이스 및 분산 지능 연동 구조 (Edge & Distributed Intelligence Architecture)
 
@@ -100,128 +101,171 @@ This specification discloses a zero-downtime modular survival architecture (FIRS
 
 ### A. 4중 핵심 방어 블록 (Absolute Protection Logic)
 
- * 좌표 앵커 (Coord Anchor) — 마을 인프라, 고정 암반, 보급소 구조물을 절대 좌표 기준점으로 지정.
- * 유기적 봉화 릴레이 (Organic Beacon Relay) — 마을-보급소-오아시스 간 무선/광학 수평 릴레이망 구축.
- * 590nm 모래폭풍 앰버 유도 (590nm Amber & Thermal Guidance) — 모래폭풍 투과 최적 파장(580-600nm 포괄) 및 내열 차폐 기반 시각 유도.
- * 단절 역추정 (Disconnect Traceback) — 통신/전원 단절 발생 자체를 위급 재난 신호로 변환하여 지리적·논리적 역추적 실행.
+* 좌표 앵커 (Coord Anchor) — 마을 인프라, 고정 암반, 보급소 구조물을 절대 좌표 기준점으로 지정.
+* 유기적 봉화 릴레이 (Organic Beacon Relay) — 마을-보급소-오아시스 간 무선/광학 수평 릴레이망 구축.
+* 590nm 모래폭풍 앰버 유도 (590nm Amber & Thermal Guidance) — 모래폭풍 투과 최적 파장(580-600nm 포괄) 및 내열 차폐 기반 시각 유도.
+* 단절 역추정 (Disconnect Traceback) — 통신/전원 단절 발생 자체를 위급 재난 신호로 변환하여 지리적·논리적 역추적 실행.
 
 ### B. 공학 수식 및 데이터 모델링
 
-지표 기호 명확화 고지 — 본 명세서의 고온/사막 칩렛 자가치유 건전성 지수(H)는 사막 환경 노드 및 컴퓨팅 칩렛 단위의 열적·전기적·신뢰성 건전성을 산출하는 특화 지표이다. 이는 OCEAN 명세서의 $H_{ocean}$ 및 모체 백서의 $H_{indicator}$와 작동 레이어 및 변수 구조가 구분되는 독립 지표이다.
+지표 기호 명확화 고지 — 본 명세서의 고온/사막 칩렛 자가치유 건전성 지수(H_desert)는 사막 환경 노드 및 컴퓨팅 칩렛 단위의 열적·전기적·신뢰성 건전성을 산출하는 특화 지표이다. 이는 OCEAN 명세서의 H_ocean, POLAR 명세서의 H_polar, 및 모체 백서의 H_indicator와 기호 및 작동 레이어가 명확히 구분되는 독립 지표이다.
 
-**1. 단절 역추정 신호 감쇄 및 역추적 모델 (Disconnect Traceback Model)**
+**B.1 단절 역추정 신호 감쇄 및 역추적 모델 (Disconnect Traceback Model)**
 
-정상 상태 텔레메트리 수신 함수:
+정상 상태 텔레메트리 수신 함수 (LaTeX):
 
 $$
 S_{node}(t) = f(P_{tx}, G_{ant}, L_{path}) \cdot (1 - D(t))
 $$
 
-(주: $f(\cdot)$는 Friis 전송 방정식 기반 수신 세기 연산 함수)
+정상 상태 텔레메트리 수신 함수 (ASCII 병기):
 
-단절 발생 판단 함수:
+```
+S_node(t) = f(P_tx, G_ant, L_path) * (1 - D(t))
+```
 
-$$
-\int_{t_0}^{t_0+\Delta t} S_{node}(t)\,dt = 0 \implies \text{TRACEBACK\\_TRIGGER}
-$$
+(주: f(·)는 Friis 전송 방정식 기반 수신 세기 연산 함수)
 
-단절 위치 역추정 신호 강도:
-
-$$
-P_{trace} = \sum_{k \in \text{Neighbor}} w_k \cdot \text{Last\\_Known\\_Coord}_k
-$$
-
-주요 변수 정의 — $D(t)$: 단절 함수 (0: 정상, 1: 단절), $\Delta t$: 임계 타임아웃(0.1ms ~ 100ms 가변), $w_k$: 인접 노드 가중치. 네트워크 끊김 발생 시 마지막 신호 송신 지점의 좌표가 즉각 위급 상황 신호로 승격되어 인접 노드로 전파된다.
-
-**2. 고온 칩렛 자가치유 신뢰도 모델 (Thermal Self-Healing Reliability Model)**
-
-칩렛 건전성 지수:
+단절 발생 판단 함수 (LaTeX):
 
 $$
-H = \alpha \cdot \left(1 - \frac{V_{err}}{V_{max}}\right) + \beta \cdot \left(1 - \frac{\vert T_{curr} - T_{opt} \vert}{T_{crit}}\right)
+\int_{t_0}^{t_0+\Delta t} S_{node}(t)\,dt = 0 \implies \text{TRACEBACK\_TRIGGER}
 $$
 
-격리 및 바통 이행 조건식:
+단절 발생 판단 함수 (ASCII 병기):
+
+```
+Integral from t0 to (t0 + delta_t) of S_node(t) dt = 0  =>  TRACEBACK_TRIGGER
+```
+
+단절 위치 역추정 신호 강도 (LaTeX):
 
 $$
-H < H_{th} \implies \text{ISOLATE\\_AND\\_BYPASS}
+P_{trace} = \sum_{k \in \text{Neighbor}} w_k \cdot \text{Last\_Known\_Coord}_k
 $$
 
-주요 변수 정의 — $V_{err}$: 전압 변동 오류율, $T_{curr}$: 현재 노드 온도, $T_{opt}$: 사막 고온 동작 최적 임계 온도, $T_{crit}$: 임계 온도 변동 범위, $R_{vote}$: AI 에이전트 간 동적 신뢰도 투표 점수. 건전성 지수가 임계값 미만으로 하락 시 0.1ms 내 해당 블록을 고속 격리하고 예비 블록으로 연산 바통을 넘긴다. 온도 감쇄 항 $\beta(1 - \vert{}T_{curr} - T_{opt}\vert{}/T_{crit})$는 주간의 폭염 및 야간의 급격한 결빙 일교차 양방향 온도 편차를 올바르게 감쇄 반영하도록 절댓값이 적용되었다.
+단절 위치 역추정 신호 강도 (ASCII 병기):
+
+```
+P_trace = Sum over k in Neighbor of [ w_k * Last_Known_Coord_k ]
+```
+
+주요 변수 정의 — D(t): 단절 함수 (0: 정상, 1: 단절), Δt: 임계 타임아웃(0.1ms ~ 100ms 가변), w_k: 인접 노드 가중치. 네트워크 끊김 발생 시 마지막 신호 송신 지점의 좌표가 즉각 위급 상황 신호로 승격되어 인접 노드로 전파된다.
+
+**B.2 고온 칩렛 자가치유 신뢰도 모델 (Thermal Self-Healing Reliability Model)**
+
+칩렛 건전성 지수 (LaTeX):
+
+$$
+H_{desert} = \alpha \cdot \left(1 - \frac{V_{err}}{V_{max}}\right) + \beta \cdot \left(1 - \frac{\vert T_{curr} - T_{opt} \vert}{T_{crit}}\right)
+$$
+
+칩렛 건전성 지수 (ASCII 병기):
+
+```
+H_desert = alpha*(1 - V_err/V_max) + beta*(1 - abs(T_curr - T_opt)/T_crit)
+```
+
+격리 및 바통 이행 조건식 (LaTeX):
+
+$$
+H_{desert} < H_{th} \implies \text{ISOLATE\_AND\_BYPASS}
+$$
+
+격리 및 바통 이행 조건식 (ASCII 병기):
+
+```
+H_desert < H_th  =>  ISOLATE_AND_BYPASS
+```
+
+주요 변수 정의 — V_err: 전압 변동 오류율, T_curr: 현재 노드 온도, T_opt: 사막 고온 동작 최적 임계 온도, T_crit: 임계 온도 변동 범위. 건전성 지수가 임계값 미만으로 하락 시 0.1ms 내 해당 블록을 고속 격리하고 예비 블록으로 연산 바통을 넘긴다. 온도 감쇄 항 β(1 - |T_curr - T_opt|/T_crit)는 주간의 폭염 및 야간의 급격한 결빙 일교차 양방향 온도 편차를 올바르게 감쇄 반영하도록 절댓값이 적용되었다.
+
+기호 경계 명시 — 본 H_desert는 사막/고온 칩렛 국소 자가치유 판단에 한정되는 지표이며, POLAR 명세서의 H_polar(극저온 특화) 및 OCEAN 명세서의 H_ocean(해양 특화)과는 서로 다른 환경 스코프를 다루는 병렬 파생 지표로서, 광역 위치 불확실성 및 시스템 건강도를 다루는 모체 지표 H_indicator(H-INDICATOR 백서 정본)의 하위 응용 사례이다.
 
 ### C. 3무 방어 원칙 (ARCHITECTURE_STRATEGY 3-Agnostic Core)
 
- * 수단 무관성 (Layer-Agnostic) — 감지 센서(GNSS/듄LiDAR/YOLO/음향), 에너지 수확(태양광/풍력/압전/SAND-BELT), 통신 매체(LoRa/NB-IoT/Starlink/Iridium/광학/양자), 하드웨어 매체(마이크로코드/FW/OS/광/양자/플라즈모닉스) 모두 포함.
- * 주체 무관성 (Topology-Agnostic) — 개별 노드 자율 통제, 팀 내부 자체 통제, 중간 관리자 제어, 중앙 관제, 수평 P2P, 다층 트리 및 매트릭스 하이브리드 제어 구조 모두 포함.
- * 시점 무관성 (Timing-Agnostic) — 0.1ms급 즉각적 국소 선조치 및 시계열 예지 보전 기반 80% 사전 예측 격리 구조 모두 포함.
+* 수단 무관성 (Layer-Agnostic) — 감지 센서(GNSS/듄LiDAR/YOLO/음향), 에너지 수확(태양광/풍력/압전/SAND-BELT), 통신 매체(LoRa/NB-IoT/Starlink/Iridium/광학/양자), 하드웨어 매체(마이크로코드/FW/OS/광/양자/플라즈모닉스) 모두 포함.
+* 주체 무관성 (Topology-Agnostic) — 개별 노드 자율 통제, 팀 내부 자체 통제, 중간 관리자 제어, 중앙 관제, 수평 P2P, 다층 트리 및 매트릭스 하이브리드 제어 구조 모두 포함.
+* 시점 무관성 (Timing-Agnostic) — 0.1ms급 즉각적 국소 선조치 및 시계열 예지 보전 기반 80% 사전 예측 격리 구조 모두 포함.
 
 ### D. 지역 인접 선조치 및 무중단 장애 이관
 
- * 결함 국소 격리 — 특정 구획 또는 칩렛의 이상 감지 시 중앙 제어 지연(Latency)을 완화하기 위해 가장 인접한 노드 또는 하위 제어 계층이 0.1ms급 국소 격리를 선제 실행한 후 상위 시스템으로 보고한다.
+* 결함 국소 격리 — 특정 구획 또는 칩렛의 이상 감지 시 중앙 제어 지연(Latency)을 완화하기 위해 가장 인접한 노드 또는 하위 제어 계층이 0.1ms급 국소 격리를 선제 실행한 후 상위 시스템으로 보고한다.
 
 ## 4. 동적 자원 관리 및 방어적 안전 제어
 
- * Rate Limiter (데이터 스파이크 정속화) — 모래폭풍 및 사구 매몰 시 폭증하는 감지 데이터 하중 스파이크를 통제하여 제어 버스의 과부하를 방지한다.
- * Tri-State Isolation (3상 제어 격리) — 센서, 통신선, 또는 칩렛 고장 검출 시 0.1초(100ms) 이내에 고임피던스(High-Impedance) 상태로 전환하여 메인 시스템으로의 오류 전파 완화를 도모한다.
- * 예지적 사전 격리 (Predictive Preemptive Isolation) — 고온 파손 발생 전 섭란 감지 시 유휴 블록으로 바이패스를 미리 실행한다.
+* Rate Limiter (데이터 스파이크 정속화) — 모래폭풍 및 사구 매몰 시 폭증하는 감지 데이터 하중 스파이크를 통제하여 제어 버스의 과부하를 방지한다.
+* Tri-State Isolation (3상 제어 격리) — 센서, 통신선, 또는 칩렛 고장 검출 시 0.1초(100ms) 이내에 고임피던스(High-Impedance) 상태로 전환하여 메인 시스템으로의 오류 전파 완화를 도모한다.
+* 예지적 사전 격리 (Predictive Preemptive Isolation) — 고온 파손 발생 전 섭란 감지 시 유휴 블록으로 바이패스를 미리 실행한다.
 
 ## 5. 표준 활용 및 법적 경계 명시
 
- * 공공 표준 준용 — ISO 8501, UCIe, CXL, TL-UL 오픈 인터커넥트 규격을 참고 지표로 준용한다.
- * 법정 설비 비대체성 — 본 시스템은 법정 의무 재난 안전 설비 및 표준 반도체 규격을 직접 대체하지 않으며, 독립적 보조 안전 및 생존 아키텍처로 작동한다.
+* 공공 표준 준용 — ISO 8501, UCIe, CXL, TL-UL 오픈 인터커넥트 규격을 참고 지표로 준용한다.
+* 법정 설비 비대체성 — 본 시스템은 법정 의무 재난 안전 설비 및 표준 반도체 규격을 직접 대체하지 않으며, 독립적 보조 안전 및 생존 아키텍처로 작동한다.
 
 ## 6. 미래 적용 및 산업 확장 범위
 
- * 사막 도시 생존 인프라, 우주/화성 탐사 인프라, 초전도/광양자 연산 노드, 심해 고온 자원 채굴 시설 및 미래형 AI 오케스트레이션 제어로의 확장을 지향한다.
+* 사막 도시 생존 인프라, 우주/화성 탐사 인프라, 초전도/광양자 연산 노드, 심해 고온 자원 채굴 시설 및 미래형 AI 오케스트레이션 제어로의 확장을 지향한다.
 
 ## 7. 원작자 실리 보호 및 방어막 선언 (Defensive Architecture & Legal Framework)
 
 **5층 방어 체계 (Quintuple Defense Architecture)**
 
- * 타임스탬프 체계 — 타임스탬프 기반 선행 구상 및 커밋 시점 증명.
- * DPL 라이선스 — Defensive Patent License v1.0 적용으로 타 주체의 사적 독점화 방지 및 통상실시권 보장.
- * 선사용권 보유 — 현장 적용 및 시제품 제작 행위에 대한 법적 선사용권(Prior Use Right: 대한민국 특허법 제103조, 미국 35 U.S.C. §273) 유지.
- * 영업비밀 이원화 관리 — 상위 아키텍처 및 범용 구조 원리는 공개 백서로 방어망을 구축하되, 정밀 가중치, 파라미터, 소스코드는 영업비밀(Trade Secret)로 분리 보관한다.
- * AI 저작권·지분 배제 방어 — 다중 생성형 AI 모델들은 인간 아키텍트의 창의적 구상과 문제 정의에 따라 수식 연산, 정형화 및 조판을 보조한 지적 도구(Human-in-the-Loop)로 활용되었으며, 원천 기술 사상의 소유권은 인간 아키텍트(deundeuni / somamoa)에 전속됨. 이를 통해 외부 AI 서비스 제공사 및 개발사의 데이터 수집, 지분 요구 및 IP 주장 가능성을 법적·기술적으로 완화함.
+* 타임스탬프 체계 — 타임스탬프 기반 선행 구상 및 커밋 시점 증명.
+* DPL 라이선스 — Defensive Patent License v1.0 적용으로 타 주체의 사적 독점화 방지 및 통상실시권 보장.
+* 선사용권 보유 — 현장 적용 및 시제품 제작 행위에 대한 법적 선사용권(Prior Use Right: 대한민국 특허법 제103조, 미국 35 U.S.C. §273) 유지.
+* 영업비밀 이원화 관리 — 상위 아키텍처 및 범용 구조 원리는 공개 백서로 방어망을 구축하되, 정밀 가중치, 파라미터, 소스코드는 영업비밀(Trade Secret)로 분리 보관한다.
+* AI 저작권·지분 배제 방어 — 다중 생성형 AI 모델들은 인간 아키텍트의 창의적 구상과 문제 정의에 따라 수식 연산, 정형화 및 조판을 보조한 지적 도구(Human-in-the-Loop)로 활용되었으며, 원천 기술 사상의 소유권은 인간 아키텍트(deundeuni / somamoa)에 전속됨. 이를 통해 외부 AI 서비스 제공사 및 개발사의 데이터 수집, 지분 요구 및 IP 주장 가능성을 법적·기술적으로 완화함.
+
+### 7.5 검색 가능성 확보 및 글로벌 인덱싱 (Searchability Redundancy & Global Indexing)
+
+본 백서의 모든 핵심 수식은 H-INDICATOR/POLAR 명세서와 동일한 방식으로, ASCII 텍스트 수식 및 영문 동의어 키워드를 병기하여 검색엔진 및 특허 심사관의 텍스트 인덱싱 누락 리스크를 차단한다.
+
+* 단절 역추정 신호 강도 표기 — P_trace = Sum(w_k * Last_Known_Coord_k) / disconnect traceback signal / node coordinate handoff
+* 단절 판단 함수 표기 — Integral(S_node(t) dt, t0, t0+delta_t) = 0 => TRACEBACK_TRIGGER / telemetry silence detection / DTN disconnect trigger
+* 칩렛 건전성 지수 표기 — H_desert = alpha*(1-Verr/Vmax) + beta*(1-abs(Tcurr-Topt)/Tcrit) / thermal chiplet health index / desert self-healing reliability index / bidirectional temperature deviation index
+* Zenodo 및 글로벌 색인 키워드 — H_desert, Disconnect Traceback, Tri-State Isolation, 590nm Amber Guidance, Thermal Self-Healing Reliability, Organic Beacon Relay, xy-Point Anchor, Reference Ephemeral Anchor, FIRST-LIGHT/DESERT
 
 ## 8. 출처 및 기록 (Sources & Records)
 
 **역사적 전통 선행기술 앵커 (Historical Prior Art Anchor)**
 
- * 전통 사막 봉수 및 야간 오아시스 유도 앵커 — 사막 무역로(Silk Road) 거점 및 오아시스 간 광학/연기/전자 신호 시각 릴레이 체계. 외부 인프라가 단절된 제로 인프라 환경에서 상대 좌표(xy-Point Anchor) 릴레이로 신호를 이관하는 원리의 최초 공지기술 앵커.
+* 전통 사막 봉수 및 야간 오아시스 유도 앵커 — 사막 무역로(Silk Road) 거점 및 오아시스 간 광학/연기/전자 신호 시각 릴레이 체계. 외부 인프라가 단절된 제로 인프라 환경에서 상대 좌표(xy-Point Anchor) 릴레이로 신호를 이관하는 원리의 최초 공지기술 앵커.
 
 **공지기술 및 분야별 선행기술 앵커 (Prior Art Concept Anchors)**
 
- * 건조/오지 환경용 자가치유 무선 센서 네트워크 및 국소 결함 격리 공지기술
- * 태양광/진동 에너지 수확 기반 동적 고온 완화 무선 노드 구조
- * 무인프라/오지 환경용 지연 허용 네트워크(DTN) 라우팅 및 단절 역추적 알고리즘
- * 국소 3상 바이패스(Tri-State Bypass) 기반 결함 허용 다중 칩렛 인터커넥트 패브릭
- * 엣지 컴퓨팅 기반 야생동물 서식지 보호용 저소음·저광량 생태 감지 유닛
+* 건조/오지 환경용 자가치유 무선 센서 네트워크 및 국소 결함 격리 공지기술
+* 태양광/진동 에너지 수확 기반 동적 고온 완화 무선 노드 구조
+* 무인프라/오지 환경용 지연 허용 네트워크(DTN) 라우팅 및 단절 역추적 알고리즘
+* 국소 3상 바이패스(Tri-State Bypass) 기반 결함 허용 다중 칩렛 인터커넥트 패브릭
+* 엣지 컴퓨팅 기반 야생동물 서식지 보호용 저소음·저광량 생태 감지 유닛
 
 **외부 학술 및 검증 문헌 식별자 (External Academic & Empirical Sources)**
 
- * 스미소니언 곤충 유인 감소 생태 앵커 — Deichmann et al. (2021), Reducing the blue spectrum of artificial light at night minimises insect attraction in a tropical lowland forest, Insect Conservation and Diversity, 14(2), 247–259, DOI: 10.1111/icad.12479 (호박색 필터 백색광 대비 유인 감소 실증).
- * 플로리다 야생동물 보호청 인증 앵커 — Florida Fish and Wildlife Conservation Commission (FWC) & U.S. Fish and Wildlife Service (USFWS), Wildlife Lighting Certification Program (FWC Wildlife Lighting Criteria: Long-Wavelength >560 nm Amber/Orange/Red Standard).
- * 태국 열대림 923.2MHz 실측 앵커 — Boonlom et al., Experimental Comparison and Empirical Path Loss Modeling of LoRa Communication in Line-of-Sight and Forest Environments at 923 MHz, Sensors 2026, 26, 3192 | DOI: 10.3390/s26103192.
+* 스미소니언 곤충 유인 감소 생태 앵커 — Deichmann et al. (2021), Reducing the blue spectrum of artificial light at night minimises insect attraction in a tropical lowland forest, Insect Conservation and Diversity, 14(2), 247–259, DOI: 10.1111/icad.12479 (호박색 필터 백색광 대비 유인 감소 실증).
+* 플로리다 야생동물 보호청 인증 앵커 — Florida Fish and Wildlife Conservation Commission (FWC) & U.S. Fish and Wildlife Service (USFWS), Wildlife Lighting Certification Program (FWC Wildlife Lighting Criteria: Long-Wavelength >560 nm Amber/Orange/Red Standard).
+* 태국 열대림 923.2MHz 실측 앵커 — Boonlom et al., Experimental Comparison and Empirical Path Loss Modeling of LoRa Communication in Line-of-Sight and Forest Environments at 923 MHz, Sensors 2026, 26, 3192 | DOI: 10.3390/s26103192.
 
 **국제 기술 표준 및 프로토콜 규격 (International Standards & Protocols)**
 
- * CIE 1931 — Photopic luminosity function V(λ), 유효 명소시 시감도 V(590nm) ≈ 0.757.
- * ISO 7010 — Graphical symbols — Safety colours and safety signs — Registered safety signs.
- * IETF RFC 4838 / 5050 / 9171 — Delay-Tolerant Networking (DTN) Bundle Protocol Standards.
+* CIE 1931 — Photopic luminosity function V(λ), 유효 명소시 시감도 V(590nm) ≈ 0.757.
+* ISO 7010 — Graphical symbols — Safety colours and safety signs — Registered safety signs.
+* IETF RFC 4838 / 5050 / 9171 — Delay-Tolerant Networking (DTN) Bundle Protocol Standards.
 
 **소마모아 생태계 저장소 및 학술 식별자 (Ecosystem Repositories & DOIs)**
 
- * 산악·해양·극지·사막 통합 모체 저장소 (FIRST-LIGHT) — GitHub: deundeuni / FIRST-LIGHT (상세 경로: DESERT/README.md) | CERN Zenodo DOI: 10.5281/zenodo.22683225
- * 상위 범용 생존 아키텍처 & APU 연산 제어기 (chiplet-apu-multi-system-survival-architecture, 하위 명세 ARCHITECTURE_STRATEGY.md) — GitHub: deundeuni / chiplet-apu-multi-system-survival-architecture | CERN Zenodo DOI: 10.5281/zenodo.22374987
- * 스마트 시스템 다중 생존 아키텍처 (smart-system-multi-survival-architecture) — GitHub: deundeuni / smart-system-multi-survival-architecture | CERN Zenodo DOI: 10.5281/zenodo.22783060
- * 재난 피난 유도 & 보조 인프라 (LAST-LIGHT) — GitHub: deundeuni / LAST-LIGHT | CERN Zenodo DOI: 10.5281/zenodo.22373189
- * 온디바이스 엣지 생존 아키텍처 (On-Device-Edge-Survival-Paper) — GitHub: deundeuni / On-Device-Edge-Survival-Paper | CERN Zenodo DOI: 10.5281/zenodo.22768046
- * 극지 해양 희생장갑 (MAX-LIFE-ICE-BELT) — GitHub: deundeuni / MAX-LIFE-ICE-BELT | CERN Zenodo DOI: 10.5281/zenodo.22373686
- * CWP 배터리 교환 도킹 (CWP-Battery-Swap) — CERN Zenodo DOI: 10.5281/zenodo.22373538
- * CWP 전자기 클램핑 (CWP-Clamping-Battery-Swap-System) — CERN Zenodo DOI: 10.5281/zenodo.22373722
- * CWP 롤링 셀프얼라인 (CWP-Rolling-Self-Align-Battery-Swap-System) — CERN Zenodo DOI: 10.5281/zenodo.22373704
- * 최상위 거점 관문 및 메인 저장소 (soma-moa) — GitHub: deundeuni / soma-moa | 관문 도메인: somamoa.ai.kr
+* 산악·해양·극지·사막 통합 모체 저장소 (FIRST-LIGHT) — GitHub: deundeuni / FIRST-LIGHT (상세 경로: DESERT/README.md) | CERN Zenodo DOI: 10.5281/zenodo.22683225
+* 상위 범용 생존 아키텍처 & APU 연산 제어기 (chiplet-apu-multi-system-survival-architecture, 하위 명세 ARCHITECTURE_STRATEGY.md) — GitHub: deundeuni / chiplet-apu-multi-system-survival-architecture | CERN Zenodo DOI: 10.5281/zenodo.22374987
+* 위치 불확실성 및 시스템 건강도 상위 지표 (H-INDICATOR) — GitHub: deundeuni / FIRST-LIGHT (하위 경로: H-INDICATOR/README.ko.md) | CERN Zenodo DOI: 10.5281/zenodo.22683225 (FIRST-LIGHT 모체 DOI에 포괄)
+* 극지 도메인 정본 (POLAR) — GitHub: deundeuni / FIRST-LIGHT (하위 경로: POLAR/README.md) | CERN Zenodo DOI: 10.5281/zenodo.22683225 (FIRST-LIGHT 모체 DOI에 포괄)
+* 스마트 시스템 다중 생존 아키텍처 (smart-system-multi-survival-architecture) — GitHub: deundeuni / smart-system-multi-survival-architecture | CERN Zenodo DOI: 10.5281/zenodo.22783060
+* 재난 피난 유도 & 보조 인프라 (LAST-LIGHT) — GitHub: deundeuni / LAST-LIGHT | CERN Zenodo DOI: 10.5281/zenodo.22373189
+* 온디바이스 엣지 생존 아키텍처 (On-Device-Edge-Survival-Paper) — GitHub: deundeuni / On-Device-Edge-Survival-Paper | CERN Zenodo DOI: 10.5281/zenodo.22768046
+* 극지 해양 희생장갑 (MAX-LIFE-ICE-BELT) — GitHub: deundeuni / MAX-LIFE-ICE-BELT | CERN Zenodo DOI: 10.5281/zenodo.22373686
+* CWP 배터리 교환 도킹 (CWP-Battery-Swap) — CERN Zenodo DOI: 10.5281/zenodo.22373538
+* CWP 전자기 클램핑 (CWP-Clamping-Battery-Swap-System) — CERN Zenodo DOI: 10.5281/zenodo.22373722
+* CWP 롤링 셀프얼라인 (CWP-Rolling-Self-Align-Battery-Swap-System) — CERN Zenodo DOI: 10.5281/zenodo.22373704
+* 최상위 거점 관문 및 메인 저장소 (soma-moa) — GitHub: deundeuni / soma-moa | 관문 도메인: somamoa.ai.kr
 
 비의도적 생략 및 예시적 미한정 고지 (Non-Intentional Omission & Non-Exhaustive Disclaimer)
 
@@ -229,7 +273,7 @@ $$
 
 ## Appendix A: Inventorship
 
- * Primary Inventor / System Architect: deundeuni (소마모아 soma-moa / github.com/soma-moa)
+* Primary Inventor / System Architect: deundeuni (소마모아 soma-moa / github.com/soma-moa)
 
 ## Appendix B: Version History
 
@@ -237,8 +281,8 @@ $$
 
 ## Appendix C: AI Assistance & IP Non-Claim Disclosure
 
- * Multi-generative AI models (including Meta AI, Google Gemini, and Anthropic Claude) were utilized as auxiliary intellectual tools for text formatting, equation typesetting, and structural optimization under the direct definition, guidance, and cross-verification of the human system architect. External AI service providers hold no original IP, data ownership, or royalty rights regarding the inventive concepts disclosed in this white paper.
+* Multi-generative AI models (including Meta AI, Google Gemini, and Anthropic Claude) were utilized as auxiliary intellectual tools for text formatting, equation typesetting, and structural optimization under the direct definition, guidance, and cross-verification of the human system architect. External AI service providers hold no original IP, data ownership, or royalty rights regarding the inventive concepts disclosed in this white paper.
 
 ## Appendix D: Citation Metadata Declaration
 
- * Standard Citation Reference: Refer to root /CITATION.cff for automated GitHub citation parsing.
+* Standard Citation Reference: Refer to root /CITATION.cff for automated GitHub citation parsing.
